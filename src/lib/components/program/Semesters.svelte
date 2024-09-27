@@ -17,7 +17,6 @@
 		jsEnabled = true;
 		document.body.classList.remove('expand');
 	});
-
 </script>
 
 <section class="semesters-sprints">
@@ -42,14 +41,12 @@
 <style>
 	section {
 		position: relative;
-
 		margin: 2rem 0 0;
 		width: 100%;
 		padding: 0;
 	}
-	h2 {
-		font-weight: normal;
-	}
+
+	h2 { font-weight: normal; }
 
 	.scroll-horo {
 		overflow-x: auto;
@@ -61,6 +58,7 @@
 		margin-left: -1rem;
 		margin-right: -1rem;
 	}
+
 	@media (min-width: 50rem) {
 		.scroll-horo {
 			margin-left: -2rem;
@@ -81,6 +79,7 @@
 		left: -9000px;
 		top: -9000px;
 	}
+
 	input[type='checkbox'].toggle + label {
 		top: 2rem;
 		right: 0;
@@ -92,6 +91,7 @@
 		font-size: 1em;
 		margin-left: 1.5rem;
 	}
+
 	input[type='checkbox'].toggle + label::before {
 		content: '';
 		width: 3rem;
@@ -100,6 +100,7 @@
 		border-radius: var(--pilled);
 		transition: background-color 200ms ease-in-out;
 	}
+
 	input[type='checkbox'].toggle + label::after {
 		content: ''; /* \2715 x */
 		position: absolute;
@@ -111,25 +112,26 @@
 		border-radius: var(--pilled);
 		font-weight: normal;
 		font-size: 0.9em;
-
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
+		transition:
+			background-color 200ms ease-in-out,
+			transform 200ms ease-in-out;
 	}
+
 	input[type='checkbox'].toggle:checked + label::after {
-		content: ''; /* \2713 v */
+		content: '';
 		transform: translateX(1.5em);
 		background-color: var(--turquoise);
 		color: var(--blueberry);
 	}
-	input[type='checkbox'].toggle:hover + label::after,
-	input[type='checkbox'].toggle:focus + label::after,
-	input[type='checkbox'].toggle:checked:hover + label::after {
+
+	input[type='checkbox'].toggle:hover + label::after, input[type='checkbox'].toggle:focus + label::after, input[type='checkbox'].toggle:checked:hover + label::after {
 		background-color: var(--turquoise);
-		/* border-color: var(--call-to-action); */
 		color: var(--blueberry);
 	}
+
 	input[type='checkbox'].toggle:checked + label::before {
 		background-color: var(--turquoise);
 		opacity: 0.5;

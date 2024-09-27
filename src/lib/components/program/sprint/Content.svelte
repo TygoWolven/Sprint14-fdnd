@@ -24,16 +24,17 @@
 		color: var(--turquoise);
 		border: 1px solid var(--turquoise);
 		margin-left: var(--shadow);
-		min-height:18rem;
-		max-width:35em;
+		min-height: 18rem;
+		max-width: 35em;
 	}
-	section div {
-		margin-top: 1.5rem;
-	}
+	
+	section div { margin-top: 1.5rem; }
+
 	:global(section h2::selection, section p::selection) {
 		background-color: var(--turquoise);
 		color: var(--blueberry);
 	}
+
 	section::after {
 		content: '';
 		position: absolute;
@@ -45,13 +46,8 @@
 		border: 1px solid currentColor;
 		border-radius: var(--rounded);
 	}
-	:global(section p) {
-		font-size: 1rem;
-	}
-	:global(blockquote) {
-		font-size: 1rem;
-	}
-	@media (min-width: 40em) {
 
-	}
+	:global(section p) { font-size: 1rem; }
+
+	:global(blockquote) { font-size: 1rem; }
 </style>

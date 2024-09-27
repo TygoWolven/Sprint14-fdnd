@@ -12,23 +12,24 @@
 
 <style>
     i {
-        display:block;
+        display: block;
         position: absolute;
-        right:-.75rem;
-        top:-1rem;
+        right: -.75rem;
+        top: -1rem;
     }
+    
     i em {
         display:flex;
         align-items: center;
         justify-content: center;
-        width:2.5rem;
-        height:2.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
         font-size: .6em;
         font-style: normal;
         font-weight: bold;
-        text-align:center;
-        border-radius:50%;
-        color:currentColor;
+        text-align: center;
+        border-radius: 50%;
+        color: currentColor;
         position: absolute;
         top: 0;
         left: 0;
