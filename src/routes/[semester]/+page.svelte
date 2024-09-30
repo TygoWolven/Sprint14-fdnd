@@ -50,4 +50,3 @@
         max-width: 40em;
     }
 </style>
-  

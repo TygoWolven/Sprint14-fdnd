@@ -11,7 +11,6 @@
 		<div>
 			{@html criteria.html}
 		</div>
-		
 	</section>
 {/if}
 
@@ -25,10 +24,10 @@
 		margin-left: var(--shadow);
 		max-width: 48rem;
 	}
-
+	
 	section div {
-		max-height:12rem;
-		overflow-y:auto;
+		max-height: 12rem;
+		overflow-y: auto;
 		font-size: 1rem;
 	}
 
@@ -36,6 +35,7 @@
 		background-color: var(--lavender);
 		color: var(--blueberry);
 	}
+
 	section::after {
 		content: '';
 		position: absolute;
@@ -47,21 +47,17 @@
 		border: 1px solid currentColor;
 		border-radius: var(--rounded);
 	}
-	details summary {
-		cursor: pointer;
-	}
+
+	details summary { cursor: pointer; }
 
 	:global(details li) {
 		margin: 0.5em 0 0;
 		font-size: 1rem;
 	}
-	:global(details summary h2) {
-		display: inline-block;
-	}
-	:global(section.criteria ul) {
-		margin-left: 0;
-	}
-	:global(section.criteria ul li) {
-		list-style: none;
-	}
+
+	:global(details summary h2) { display: inline-block; }
+
+	:global(section.criteria ul) { margin-left: 0; }
+
+	:global(section.criteria ul li) { list-style: none; }
 </style>

@@ -101,16 +101,11 @@
 		margin: 1rem 0 0;
 	}
 
-	section > :global(h2) {
-		padding-left: 1rem;
-	}
-	.week-container {
-		padding: 0 1rem 2rem;
-	}
+	section > :global(h2) { padding-left: 1rem; }
 
-	.week + .week {
-		margin-top: 2rem;
-	}
+	.week-container { padding: 0 1rem 2rem; }
+
+	.week + .week { margin-top: 2rem; }
 
 	h3 {
 		position: sticky;
@@ -131,19 +126,18 @@
 		border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 		background: var(--blueberry);
 	}
-	.day div {
-		margin-left: -1rem;
-	}
 
-	.day + .day {
-		margin-top: 1rem;
-	}
+	.day div { margin-left: -1rem; }
+
+	.day + .day { margin-top: 1rem; }
+
 	.day :global(p) {
 		--border: var(--white);
 		position: relative;
 		font-size: 1rem;
 		padding-left: 1rem;
 	}
+
 	.day :global(p::before) {
 		content: '';
 		position: absolute;
@@ -156,50 +150,37 @@
 		opacity: 1;
 	}
 
-	.day :global(.sprintplanning) {
-		--border: var(--lavender);
-	}
-	.day :global(.workshop) {
-		--border: var(--turquoise);
-	}
-	.day :global(.opdrachtgever),
-	.day :global(.code-review),
-	.day :global(.review),
-	.day :global(.retrospect),
-	.day :global(.kickoff),
-	.day :global(.wrap-up) {
-		--border: var(--call-to-action);
-	}
+	.day :global(.sprintplanning) { --border: var(--lavender); }
+
+	.day :global(.workshop) { --border: var(--turquoise); }
+
+	.day :global(.opdrachtgever), .day :global(.code-review), .day :global(.review), .day :global(.retrospect), .day :global(.kickoff), .day :global(.wrap-up) { --border: var(--call-to-action); }
 
 	@media (min-width: 40rem) {
-		section > :global(h2) {
-			padding-left: 1rem;
-		}
-		.day div {
-			margin-left: 0;
-		}
+		section > :global(h2) { padding-left: 1rem; }
+
+		.day div { margin-left: 0; }
 	}
 	@media (min-width: 50rem) {
-		section > :global(h2) {
-			padding-left: 2rem;
-		}
-		section {
-			margin: 1rem -1rem;
-		}
+		section > :global(h2) { padding-left: 2rem; }
+
+		section { margin: 1rem -1rem; }
 	}
+
 	@media (min-width: 47rem) {
 		.week-container {
 			overflow-x: auto;
 			padding: 2rem 1rem 2rem;
 		}
+
 		.week {
 			display: flex;
 			width: max-content;
 			gap: 1rem;
 		}
-		h3 {
-			margin-left: 1rem;
-		}
+
+		h3 { margin-left: 1rem; }
+
 		.day {
 			aspect-ratio: 1;
 			border-radius: 0.5rem;
@@ -208,32 +189,28 @@
 			padding: 1rem;
 			box-shadow: -4px 4px var(--turquoise);
 		}
-		.day + .day {
-			margin-top: 0;
-		}
+
+		.day + .day { margin-top: 0; }
+
 		.weekday {
 			text-align: right;
 			margin: 0 0 1rem;
 			border: none;
 		}
 	}
+
 	@media (min-width: 90rem) {
-		/* 1440px */
-		section > :global(h2) {
-			padding-left: 1rem;
-		}
-		section {
-			margin: 2rem 0;
-		}
+		section > :global(h2) { padding-left: 1rem; }
+
+		section { margin: 2rem 0; }
+
 		.week-container {
 			overflow: visible;
 			padding: 1rem 0 0;
 		}
-		.week-container + .week-container {
-			padding: 2rem 0 0;
-		}
-		.day {
-			width: calc((var(--max-width) - 4rem) / 5);
-		}
+
+		.week-container + .week-container { padding: 2rem 0 0; }
+
+		.day { width: calc((var(--max-width) - 4rem) / 5); }
 	}
 </style>
