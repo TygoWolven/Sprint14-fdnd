@@ -27,6 +27,8 @@
 		font-weight: normal;
 		letter-spacing: -0.04em;
 		margin: 0;
+		text-align: center;
+		font-weight: 600;
 	}
 
 	h2 a.anchor {

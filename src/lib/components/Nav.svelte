@@ -28,8 +28,8 @@
         </li>
         <li>
 			<h1>
-          <a class:active={$page.url.pathname === secondItem.href} href={secondItem.href} target="_self"> {secondItem.title} </a>
-		</h1>
+        		<a class:active={$page.url.pathname === secondItem.href} href={secondItem.href} target="_self"> {secondItem.title} </a>
+			</h1>
         </li>
         <li>
           <a class:active={$page.url.pathname === thirdItem.href} href={thirdItem.href} target="_self">{thirdItem.title}</a>
@@ -62,9 +62,10 @@
 	}
 
 	header {
-		display:flex;
-		max-width: var(--max-width);
+		width: 100%;
 		margin: auto;
+		margin-top: -1.25em;
+		margin-bottom: 1.25em;
 	}
 
 	header div {
@@ -88,13 +89,12 @@
 
 	nav {
 		font-size: 0.8rem;
-		width: 80vw;
 	}
 
 	ul {
 		display: flex;
 		justify-content: center	;
-		gap: 1.25em;
+		gap: 1.5em;
 		font-weight: 600;
 	}
 
