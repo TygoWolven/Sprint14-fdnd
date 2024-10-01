@@ -28,9 +28,7 @@
         </li>
         <li>
 			<h1>
-          <a class:active={$page.url.pathname === secondItem.href} href={secondItem.href} target="_self">
-				{secondItem.title}
-          </a>
+          <a class:active={$page.url.pathname === secondItem.href} href={secondItem.href} target="_self"> {secondItem.title} </a>
 		</h1>
         </li>
         <li>
@@ -54,7 +52,7 @@
 		font-size: 1.2rem;
 		font-weight: 600;
 		letter-spacing: -0.06em;
-		padding: 0 0.6em;
+		padding: 0 0.75em;
 		margin: 0;
 		border-radius: var(--rounded);
 	}
@@ -71,10 +69,9 @@
 
 	header div {
 		display: flex;
-		gap: 1em;
 		align-items: baseline;
 		justify-content: center;
-		padding: 0.5em 0.7em calc(0.5em + var(--shadow));
+		padding: 0.5em 0.75em calc(0.5em + var(--shadow));
 		background-color: var(--turquoise);
 		color: var(--blueberry);
 		border-radius: var(--rounded);
@@ -97,16 +94,17 @@
 	ul {
 		display: flex;
 		justify-content: center	;
-		gap: 1em;
+		gap: 1.25em;
 		font-weight: 600;
 	}
 
 	nav ul li a {
 		position: relative;
+		font-size: 1.2rem;
 		transform: none;
 		display: inline-block;
 		padding: 0.3em 0.6em;
-		border-radius: 1em;
+		border-radius: 2em;
 		text-decoration: none;
 		transition: background 0.3s ease-out, color 0.3s ease-out;
 		white-space: nowrap;
