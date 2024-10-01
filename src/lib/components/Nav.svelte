@@ -1,41 +1,44 @@
 <script>
 	import { page } from '$app/stores';
-	$: navItems = [
-		{
-			href: '/',
-			title: 'Programma 2425'
-		},
-		{
-			href: '/static-web/the-client',
-			title: 'Sprint 2'
-		},
-		{
-			href: '/workflow-tooling-frameworks/lose-your-head',
-			title: 'Sprint 14'
-		},
-	]
 
+  	let navItems = [
+    {
+      href: '/static-web/the-client',
+      title: 'Sprint 2'
+    },
+	{
+		href: '/',
+		title: 'FDND'
+	},
+    {
+      href: '/workflow-tooling-frameworks/lose-your-head',
+      title: 'Sprint 14'
+    },
+  ];
+
+  const [firstItem, secondItem, thirdItem] = navItems;
 </script>
 
 <header>
-	<div>
-		<a href="/">
+  <div>
+    <nav>
+      <ul>
+        <li>
+          <a class:active={$page.url.pathname === firstItem.href} href={firstItem.href} target="_self">{firstItem.title}</a>
+        </li>
+        <li>
 			<h1>
-				<abbr title="Frontend Design &amp; Development"> <span>FDND</span> </abbr>
-			</h1>
-		</a>
-		<nav>
-			<h2>Menu</h2>
-			<ul>
-				{#each navItems as item }
-					<li>
-						<a class:active={$page.url.pathname === item.href} href={item.href} target="_self">{item.title}</a>
-					</li>
-				{/each}
-			</ul>
-		</nav>
-	</div>
-	
+          <a class:active={$page.url.pathname === secondItem.href} href={secondItem.href} target="_self">
+				{secondItem.title}
+          </a>
+		</h1>
+        </li>
+        <li>
+          <a class:active={$page.url.pathname === thirdItem.href} href={thirdItem.href} target="_self">{thirdItem.title}</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 
@@ -45,34 +48,19 @@
 		margin-left: var(--shadow);
 	}
 
-	h1 { margin: 0; }
-
-	h1 > abbr {
+	h1{
 		position: relative;
 		color: var(--blueberry);
 		font-size: 1.2rem;
 		font-weight: 600;
 		letter-spacing: -0.06em;
-		padding: 0.3em 0.2em;
-		border: 1px solid var(--blueberry);
+		padding: 0 0.6em;
+		margin: 0;
 		border-radius: var(--rounded);
 	}
 
 	@media (max-width: 750px) {
-		h1 > abbr { color: var(--turquoise); }
-
-	}
-
-	h1 > abbr::before {
-		content: '';
-		position: absolute;
-		top: var(--shadow);
-		left: calc(var(--shadow) * -1);
-		right: var(--shadow);
-		bottom: calc(var(--shadow) * -1);
-		border: 1px solid currentColor;
-		border-radius: var(--rounded);
-		display:none;
+		h1 { color: var(--turquoise); }
 	}
 
 	header {
@@ -85,7 +73,7 @@
 		display: flex;
 		gap: 1em;
 		align-items: baseline;
-		justify-content: flex-start;
+		justify-content: center;
 		padding: 0.5em 0.7em calc(0.5em + var(--shadow));
 		background-color: var(--turquoise);
 		color: var(--blueberry);
@@ -106,12 +94,9 @@
 		width: 80vw;
 	}
 
-	h2 {
-		position: absolute;
-		text-indent: -9999px;
-	}
 	ul {
 		display: flex;
+		justify-content: center	;
 		gap: 1em;
 		font-weight: 600;
 	}
@@ -120,18 +105,16 @@
 		position: relative;
 		transform: none;
 		display: inline-block;
-		padding: 0.3em 0.8em;
+		padding: 0.3em 0.6em;
 		border-radius: 1em;
 		text-decoration: none;
 		transition: background 0.3s ease-out, color 0.3s ease-out;
-		border: 1px solid var(--turquoise);
 		white-space: nowrap;
 	}
+
 	nav ul li a:hover {border-color: var(--blueberry);}
 
-	nav ul li a:hover::before {
-		opacity: 1;
-	}
+	nav ul li a:hover::before { opacity: 1; }
 
 	:global(nav a.active) {
 		font-weight: 800;
