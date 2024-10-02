@@ -30,8 +30,6 @@
 	{/if}
 
 	<div class="scroll-horo">
-		<span class="scroll-label visually-hidden">scroll >>> </span>
-
 		{#each semesters as semester, i}
 			<Semester {semester} {i} />
 		{/each}
@@ -41,12 +39,15 @@
 <style>
 	section {
 		position: relative;
-		margin: 2rem 0 0;
 		width: 100%;
 		padding: 0;
+		background: var(--grey);
 	}
 
-	h2 { font-weight: normal; }
+	h2 { 
+		font-weight: normal; 
+		margin: 0;
+	}
 
 	.scroll-horo {
 		overflow-x: auto;
@@ -55,22 +56,6 @@
 		flex-wrap: nowrap;
 		scroll-snap-type: x mandatory;
 		padding: 1rem 2rem 2rem;
-		margin-left: -1rem;
-		margin-right: -1rem;
-	}
-
-	@media (min-width: 50rem) {
-		.scroll-horo {
-			margin-left: -2rem;
-			margin-right: -2rem;
-		}
-	}
-
-	.scroll-label {
-		position: absolute;
-		top: 0;
-		right: 1rem;
-		background: var(--call-to-action);
 	}
 
 	input[type='checkbox'].toggle {

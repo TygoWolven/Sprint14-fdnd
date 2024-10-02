@@ -18,24 +18,21 @@
 </script>
 
 <header>
-	<div>
-		<a href="/">
-			<h1>
-				<abbr title="Frontend Design &amp; Development"> <span>FDND</span> </abbr>
-			</h1>
-		</a>
-		<nav>
-			<h2>Menu</h2>
-			<ul>
-				{#each navItems as item }
-					<li>
-						<a class:active={$page.url.pathname === item.href} href={item.href} target="_self">{item.title}</a>
-					</li>
-				{/each}
-			</ul>
-		</nav>
-	</div>
-	
+	<a href="/">
+		<h1>
+			<abbr title="Frontend Design &amp; Development"> <span>FDND</span> </abbr>
+		</h1>
+	</a>
+	<nav>
+		<h2>Menu</h2>
+		<ul>
+			{#each navItems as item }
+				<li>
+					<a class:active={$page.url.pathname === item.href} href={item.href} target="_self">{item.title}</a>
+				</li>
+			{/each}
+		</ul>
+	</nav>
 </header>
 
 
@@ -56,6 +53,7 @@
 		padding: 0.3em 0.2em;
 		border: 1px solid var(--blueberry);
 		border-radius: var(--rounded);
+		text-decoration: none;
 	}
 
 	@media (max-width: 750px) {
@@ -79,31 +77,16 @@
 		display:flex;
 		max-width: var(--max-width);
 		margin: auto;
-	}
-
-	header div {
-		display: flex;
-		gap: 1em;
 		align-items: baseline;
-		justify-content: flex-start;
-		padding: 0.5em 0.7em calc(0.5em + var(--shadow));
-		background-color: var(--turquoise);
-		color: var(--blueberry);
-		border-radius: var(--rounded);
+		justify-content: space-between;
 		flex-wrap:nowrap;
-	}
-
-	@media (max-width: 750px) {
-		header div {
-			background-color: transparent;
-			padding: 0;
-			gap: 1em;
-		}
 	}
 
 	nav {
 		font-size: 0.8rem;
-		width: 80vw;
+		background-color: var(--grey);
+		color: var(--blueberry);
+		border-radius: 20px 20px 0 0;
 	}
 
 	h2 {
@@ -112,7 +95,6 @@
 	}
 	ul {
 		display: flex;
-		gap: 1em;
 		font-weight: 600;
 	}
 
@@ -124,19 +106,12 @@
 		border-radius: 1em;
 		text-decoration: none;
 		transition: background 0.3s ease-out, color 0.3s ease-out;
-		border: 1px solid var(--turquoise);
 		white-space: nowrap;
-	}
-	nav ul li a:hover {border-color: var(--blueberry);}
-
-	nav ul li a:hover::before {
-		opacity: 1;
+		color: var(--blueberry);
 	}
 
-	:global(nav a.active) {
-		font-weight: 800;
-		background-color: var(--blueberry);
-		color: var(--turquoise);
+	nav ul li a:hover {
+		text-decoration: underline;
 	}
 
 	@media (max-width: 750px) {

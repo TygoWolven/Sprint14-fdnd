@@ -1,5 +1,6 @@
 :root {
     --white: #fff;
+    --grey: #ECECEC;
     --blueberry: #050542;
     --turquoise: #66e5bf;
     --lavender: #a675f5;
@@ -14,6 +15,12 @@
 
     --breakpoint-medium: 30em;
 }
+
+* {
+    font-family: Open Sans, sans-serif;
+    list-style: none;
+}
+
 body {
     overflow-x:hidden;
 }

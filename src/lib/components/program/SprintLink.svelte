@@ -21,7 +21,7 @@
 {#if sprint.sprintNumber}
 	<li class:active class:past>
 		<a data-sveltekit-prefetch href="{semester.slug}/{sprint.slug}">
-			<span>Sprint {sprint.sprintNumber}:</span>
+			<span>Sprint<br>{sprint.sprintNumber}</span>
 			<strong>{sprint.title}</strong>
 		</a>
 
@@ -60,10 +60,16 @@
 	a:focus { background-color: transparent; }
 
 	li a > span {
-		display: block;
+		width: fit-content;
+		aspect-ratio: 1;
 		font-size: 0.7em;
 		letter-spacing: 0;
+		text-align: center;
 		text-transform: uppercase;
+		background: var(--lavender);
+		margin-right: 1.2em;
+		color: #FFFFFF;
+		padding: 0.5em;
 	}
 
 	li {
@@ -84,7 +90,7 @@
     :global(li.past time) { text-decoration: line-through; }
 
 	li a, li > span {
-		display: inline-block;
+		display: flex;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
