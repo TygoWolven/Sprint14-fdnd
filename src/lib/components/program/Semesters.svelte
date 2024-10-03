@@ -56,7 +56,8 @@
 		bottom: 0;
 	}
 
-	.fixed-bar::before {
+	.fixed-bar::before,
+	.fixed-bar::after {
 		content: '';
 		position: absolute;
 		width: 1.5em;
@@ -69,14 +70,9 @@
 	}
 
 	.fixed-bar::after {
-		content: '';
-		position: absolute;
-		width: 1.5em;
-		aspect-ratio: 1;
 		right: 0;
-		border-radius: 0 0 50% 0;
-		bottom: 2em;
-		box-shadow: 0.5em 0.5em 0 0 var(--lavender);
+		left: unset;
+		transform: unset;
 	}
 
 	h2 { 
