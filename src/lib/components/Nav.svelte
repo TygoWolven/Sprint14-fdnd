@@ -39,22 +39,6 @@
 
 
 <style>
-	a {
-		text-decoration: none;
-		margin-left: var(--shadow);
-	}
-
-	h1{
-		position: relative;
-		color: var(--blueberry);
-		font-size: 1.2rem;
-		font-weight: 600;
-		letter-spacing: -0.06em;
-		padding: 0 0.75em;
-		margin: 0;
-		border-radius: var(--rounded);
-	}
-	
 	header {
 		display: flex;
 		align-items: baseline;
@@ -68,23 +52,9 @@
 		flex-wrap: nowrap;
 	}
 
-	@media (max-width: 750px) {
-		header {
-			width: 105%;
-			margin-inline: -8px;
-			margin-top: -2.25em;
-		}
-	}
+	nav { font-size: 0.8rem; }
 
-	@media (min-width: 1080px) {
-		header { width: 35%; }
-	}
-
-	nav {
-		font-size: 0.8rem;
-	}
-
-	ul {
+	nav ul {
 		display: flex;
 		justify-content: center	;
 		gap: 1.5em;
@@ -100,6 +70,19 @@
 		border-radius: 12px;
 		text-decoration: none;
 		white-space: nowrap;
+		text-decoration: none;
+		margin-left: var(--shadow);
+	}
+
+	header nav ul li h1{
+		position: relative;
+		color: var(--blueberry);
+		font-size: 1.2rem;
+		font-weight: 600;
+		letter-spacing: -0.06em;
+		padding: 0 0.75em;
+		margin: 0;
+		border-radius: var(--rounded);
 	}
 
 	:global(nav a.active) {
@@ -109,8 +92,16 @@
 	}
 
 	@media (max-width: 750px) {
-		nav ul {
-			font-size: 0.75em;
+		header {
+			width: 105%;
+			margin-inline: -8px;
+			margin-top: -2.25em;
 		}
+
+		nav ul { font-size: 0.75em; }
+	}
+
+	@media (min-width: 1080px) {
+		header { width: 35%; }
 	}
 </style>

@@ -10,7 +10,7 @@
 </section>
 
 <style>
- section {
+    section {
         position: relative;
         max-width: 48rem;
         background-color: var(--blueberry);
@@ -20,10 +20,6 @@
         margin-top: 0.25rem;
 		margin-bottom: 1.25rem;
         padding: 1rem;
-    }
-    
-    @media (max-width: 750px) {
-        section { width: 100%; }
     }
 
     :global(section h2::selection, section p::selection) {

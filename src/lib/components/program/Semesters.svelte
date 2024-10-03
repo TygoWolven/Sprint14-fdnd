@@ -42,8 +42,9 @@
 	section {
 		position: relative;
 		margin: 2rem 0 0;
-		width: 100%;
+		width: 105%;
 		padding: 0;
+		overflow-x: hidden;
 	}
 
 	h2 { font-weight: normal; }
