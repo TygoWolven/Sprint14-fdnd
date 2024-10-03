@@ -50,10 +50,11 @@
 		padding: 0.2em 0.1em;
 		transition: 0.1s ease-out background, 0.1s ease-out color;
 		border-radius: 0.2em;
+		color: var(--blueberry);
 	}
 
 	li:not(.extra):hover, li a:focus {
-		background-color: var(--turquoise);
+		background-color: var(--white);
 		color: var(--blueberry);
 	}
 
@@ -68,7 +69,7 @@
 		text-transform: uppercase;
 		background: var(--lavender);
 		margin-right: 1.2em;
-		color: #FFFFFF;
+		color: var(--white);
 		padding: 0.5em;
 	}
 
@@ -81,11 +82,11 @@
 		border-radius: 0.2em;
 	}
 
-	:global(li.active) { background-color: rgba(102, 229, 191, 0.4); }
+	:global(li.active) { background-color: var(--white); }
 
 	:global(li.past) { opacity: 0.75; }
 
-	:global(li.past strong) { font-weight: 200; }
+	:global(li.past strong) { font-weight: 500; }
 
     :global(li.past time) { text-decoration: line-through; }
 

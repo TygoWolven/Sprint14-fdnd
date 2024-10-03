@@ -11,13 +11,17 @@
     --rounded: .5rem;
     --pilled: 2rem;
     --shadow: .3rem;
-    --max-width: 90rem;
 
     --breakpoint-medium: 30em;
 }
 
+@font-face {
+    font-family: OpenSans;
+    src: url('../fonts/OpenSans-VariableFont_wdth\,wght.ttf')
+}
+
 * {
-    font-family: Open Sans, sans-serif;
+    font-family: OpenSans, sans-serif;
     list-style: none;
 }
 
@@ -26,7 +30,7 @@ body {
 }
 
 h2 {
-    margin-left:1.5rem
+    margin-left:1.5rem;
 }
 
 footer {

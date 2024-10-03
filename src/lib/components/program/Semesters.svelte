@@ -42,10 +42,11 @@
 		width: 100%;
 		padding: 0;
 		background: var(--grey);
+		border-radius: 0 0 15px 15px;
+		color: var(--blueberry);
 	}
 
 	h2 { 
-		font-weight: normal; 
 		margin: 0;
 	}
 
@@ -74,14 +75,14 @@
 		color: white;
 		font-family: helvetica;
 		font-size: 1em;
-		margin-left: 1.5rem;
+		margin-left: 3rem;
 	}
 
 	input[type='checkbox'].toggle + label::before {
 		content: '';
 		width: 3rem;
 		height: 1.325rem;
-		border: solid 1px var(--turquoise);
+		border: solid 1px var(--blueberry);
 		border-radius: var(--pilled);
 		transition: background-color 200ms ease-in-out;
 	}
@@ -92,8 +93,8 @@
 		width: 1.5rem;
 		height: 1.5rem;
 		background-color: var(--blueberry);
-		color: var(--turquoise);
-		border: solid 1px var(--turquoise);
+		color: var(--blueberry);
+		border: solid 1px var(--blueberry);
 		border-radius: var(--pilled);
 		font-weight: normal;
 		font-size: 0.9em;
@@ -108,23 +109,23 @@
 	input[type='checkbox'].toggle:checked + label::after {
 		content: '';
 		transform: translateX(1.5em);
-		background-color: var(--turquoise);
+		background-color: var(--blueberry);
 		color: var(--blueberry);
 	}
 
 	input[type='checkbox'].toggle:hover + label::after, input[type='checkbox'].toggle:focus + label::after, input[type='checkbox'].toggle:checked:hover + label::after {
-		background-color: var(--turquoise);
+		background-color: var(--blueberry);
 		color: var(--blueberry);
 	}
 
 	input[type='checkbox'].toggle:checked + label::before {
-		background-color: var(--turquoise);
+		background-color: var(--blueberry);
 		opacity: 0.5;
-		border-color: var(--turquoise);
+		border-color: var(--blueberry);
 	}
 
 	label span {
-		color: var(--turquoise);
+		color: var(--blueberry);
 		margin-left: 0.5em;
 		font-size: 0.7em;
 	}
