@@ -16,7 +16,7 @@
         background-color: var(--blueberry);
         color: var(--turquoise);
         border: 1px solid var(--turquoise);
-        margin-inline: auto;
+        margin-inline: .05em auto;
         margin-top: 0.25rem;
 		margin-bottom: 1.25rem;
         padding: 1rem;

@@ -20,7 +20,6 @@
 </script>
 
 <header>
-  <div>
     <nav>
       <ul>
         <li>
@@ -36,7 +35,6 @@
         </li>
       </ul>
     </nav>
-  </div>
 </header>
 
 
@@ -62,27 +60,23 @@
 	}
 
 	header {
-		width: 100%;
-		margin: auto;
-		margin-top: -1.25em;
-		margin-bottom: 1.25em;
-	}
-
-	header div {
 		display: flex;
 		align-items: baseline;
 		justify-content: center;
-		padding: 0.5em 0.75em calc(0.5em + var(--shadow));
+		width: 60%;
+		margin: -2.25em auto 2.75em auto;
+		padding: 0.75em;
 		background-color: var(--turquoise);
 		color: var(--blueberry);
-		border-radius: var(--rounded);
-		flex-wrap:nowrap;
+		border-radius: 0 0 120px 120px;
+		flex-wrap: nowrap;
 	}
 
 	@media (max-width: 750px) {
-		header div {
+		header {
 			background-color: transparent;
 			padding: 0;
+			margin-top: -1em;
 			gap: 1em;
 		}
 	}
@@ -100,11 +94,11 @@
 
 	nav ul li a {
 		position: relative;
-		font-size: 1.2rem;
+		font-size: 1.15rem;
 		transform: none;
 		display: inline-block;
-		padding: 0.3em 0.6em;
-		border-radius: 2em;
+		padding: 0.25em 0.5em;
+		border-radius: 12px;
 		text-decoration: none;
 		transition: background 0.3s ease-out, color 0.3s ease-out;
 		white-space: nowrap;
