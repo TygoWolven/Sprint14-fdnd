@@ -23,27 +23,25 @@
 </aside>
 
 <style>
-	aside { 
-		margin-top: 0.2em; 
+	aside { margin-top: 0.2em;  }
 
-		& h3 {  display: none; }
+	aside h3 {  display: none; }
 
-		& ul {
-			margin: 0;
-			display: flex;
-			flex-wrap: wrap;
-			column-gap: 0.5rem;
-			row-gap: 0.1rem;
-			
-			& li {
-				list-style: none;
-				padding: 0.1rem 0.5rem;
-				white-space: nowrap;
-				font-size: 0.8rem;
-				border-radius: 0.5rem;
-				line-height: 1.5;
-				display: flex;
-			}
-		}
+	aside ul {
+		margin: 0;
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 0.5rem;
+		row-gap: 0.1rem;
+	}
+
+	aside ul li {
+		list-style: none;
+		padding: 0.1rem 0.5rem;
+		white-space: nowrap;
+		font-size: 0.8rem;
+		border-radius: 0.5rem;
+		line-height: 1.5;
+		display: flex;
 	}
 </style>
