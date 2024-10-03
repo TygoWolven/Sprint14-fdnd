@@ -46,8 +46,8 @@
 		width: 55%;
 		margin: -2.25em auto 2.75em auto;
 		padding: 0.75em;
-		background-color: var(--turquoise);
-		color: var(--blueberry);
+		background-color: var(--lavender);
+		color: var(--attention);
 		border-radius: 0 0 120px 120px;
 		flex-wrap: nowrap;
 	}
@@ -76,7 +76,7 @@
 
 	header nav ul li h1{
 		position: relative;
-		color: var(--blueberry);
+		color: var(--attention);
 		font-size: 1.2rem;
 		font-weight: 600;
 		letter-spacing: -0.06em;
@@ -87,8 +87,8 @@
 
 	:global(nav a.active) {
 		font-weight: 800;
-		background-color: var(--blueberry);
-		color: var(--turquoise);
+		background-color: var(--attention);
+		color: var(--lavender);
 	}
 
 	@media (max-width: 750px) {

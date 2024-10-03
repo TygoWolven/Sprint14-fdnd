@@ -12,10 +12,10 @@
 <style>
     section {
         position: relative;
-        max-width: 48rem;
-        background-color: var(--blueberry);
-        color: var(--turquoise);
-        border: 1px solid var(--turquoise);
+        max-width: 42rem;
+        background-color: var(--lavender);
+        color: var(--attention);
+        border: 1px solid var(--lavender);
         margin-inline: .05em auto;
         margin-top: 0.25rem;
 		margin-bottom: 1.25rem;
@@ -23,8 +23,8 @@
     }
 
     :global(section h2::selection, section p::selection) {
-        background-color: var(--turquoise);
-        color: var(--blueberry);
+        background-color: var(--lavender);
+        color: var(--lavender);
     }
 
     section::after {
@@ -32,10 +32,10 @@
         position: absolute;
         z-index: -1;
         top: var(--shadow);
-        left: calc(var(--shadow) * -1);
+        left: calc(var(--shadow) * -1.75);
         right: var(--shadow);
-        bottom: calc(var(--shadow) * -1);
-        border: 1px solid currentColor;
+        bottom: calc(var(--shadow) * -1.75);
+        border: 1px solid var(--lavender);
         border-radius: var(--rounded);
     }
 
