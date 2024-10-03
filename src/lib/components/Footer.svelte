@@ -40,7 +40,7 @@
 		display: flex;
 		justify-content: center;
 		font-size: 1rem;
-		padding: 2rem 0;
+		padding: 0 0 2rem 0;
 	}
 
 	img {

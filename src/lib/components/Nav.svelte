@@ -161,15 +161,9 @@
 	@media (max-width: 750px) {
 		nav ul {
 			font-size: 0.75em;
-			color: var(--turquoise);
-		}
-
-		nav ul li a:hover {
-			border-color: var(--turquoise);
 		}
 
 		:global(nav a.active) {
-			background-color: var(--turquoise);
 			color: var(--blueberry) !important;;
 		}
 	}

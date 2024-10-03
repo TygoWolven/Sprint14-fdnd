@@ -36,6 +36,8 @@
 	</div>
 </section>
 
+<div class="fixed-bar"></div>
+
 <style>
 	section {
 		position: relative;
@@ -44,6 +46,37 @@
 		background: var(--grey);
 		border-radius: 0 0 15px 15px;
 		color: var(--blueberry);
+	}
+
+	.fixed-bar {
+		width: 100%;
+		height: 2em;
+		background: var(--lavender);
+		position: sticky;
+		bottom: 0;
+	}
+
+	.fixed-bar::before {
+		content: '';
+		position: absolute;
+		width: 1.5em;
+		aspect-ratio: 1;
+		left: 0;
+		border-radius: 0 0 50% 0;
+		bottom: 2em;
+		box-shadow: 0.5em 0.5em 0 0 var(--lavender);
+		transform: rotate(90deg);
+	}
+
+	.fixed-bar::after {
+		content: '';
+		position: absolute;
+		width: 1.5em;
+		aspect-ratio: 1;
+		right: 0;
+		border-radius: 0 0 50% 0;
+		bottom: 2em;
+		box-shadow: 0.5em 0.5em 0 0 var(--lavender);
 	}
 
 	h2 { 
