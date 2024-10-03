@@ -54,10 +54,6 @@
 		margin: 0;
 		border-radius: var(--rounded);
 	}
-
-	@media (max-width: 750px) {
-		h1 { color: var(--turquoise); }
-	}
 	
 	header {
 		display: flex;
@@ -74,9 +70,9 @@
 
 	@media (max-width: 750px) {
 		header {
-			background-color: transparent;
-			padding: 0;
-			margin-top: -1em;
+			width: 105%;
+			margin-inline: -8px;
+			margin-top: -2.25em;
 		}
 	}
 
@@ -115,16 +111,6 @@
 	@media (max-width: 750px) {
 		nav ul {
 			font-size: 0.75em;
-			color: var(--turquoise);
-		}
-
-		nav ul li a:hover {
-			border-color: var(--turquoise);
-		}
-
-		:global(nav a.active) {
-			background-color: var(--turquoise);
-			color: var(--blueberry) !important;;
 		}
 	}
 </style>
