@@ -58,12 +58,12 @@
 	@media (max-width: 750px) {
 		h1 { color: var(--turquoise); }
 	}
-
+	
 	header {
 		display: flex;
 		align-items: baseline;
 		justify-content: center;
-		width: 60%;
+		width: 55%;
 		margin: -2.25em auto 2.75em auto;
 		padding: 0.75em;
 		background-color: var(--turquoise);
@@ -77,8 +77,11 @@
 			background-color: transparent;
 			padding: 0;
 			margin-top: -1em;
-			gap: 1em;
 		}
+	}
+
+	@media (min-width: 1080px) {
+		header { width: 35%; }
 	}
 
 	nav {
