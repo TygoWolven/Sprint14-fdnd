@@ -2,43 +2,35 @@
     import { page } from '$app/stores';
 </script>
 
-<main>
-    <h1>404 Error: Joke Not Found</h1>
-    <p>Why do programmers prefer dark mode?</p>
-    <p>Because the light attracts bugs!</p>
+<main> 
+    <h1> OOPS! </h1>
+    <p> 
+     Looks like our students have taken <strong> "Website Destruction"</strong> to a whole new level 
+    </p>
 </main>
 
 <style>
-main {
+    main {
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    margin-top: 20vh;
+    justify-content: center;
+    margin: 3rem;
     font-family: Arial, sans-serif;
-}
+    }
 
-h1 {
-    color: #000000;
-    font-size: 2em;
-}
+    h1 {
+        color: rgb(153, 64, 153);
+        font-size: 3rem;
+    }
 
-p:first-child   {
-    color: #333;
-    font-size: 1.2em;
-}
+    p {
+        color: #000000;
+        font-size: 1.5rem;
+    }
 
-p:last-child {
-    color: #333;
-    font-size: 1.2em;
-    opacity: 0; 
-    animation: fadeIn 4s forwards;
-}
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
+    strong {
+    color: rgb(153, 64, 153);
     }
 
 </style>
