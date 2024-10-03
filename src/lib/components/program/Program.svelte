@@ -20,7 +20,6 @@
         margin-top: 0.25rem;
 		margin-bottom: 1.25rem;
         padding: 1rem;
-        grid-column: 1 / 2;
     }
     
     @media (max-width: 750px) {

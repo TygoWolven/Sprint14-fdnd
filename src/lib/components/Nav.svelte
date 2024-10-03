@@ -103,13 +103,8 @@
 		padding: 0.25em 0.5em;
 		border-radius: 12px;
 		text-decoration: none;
-		transition: background 0.3s ease-out, color 0.3s ease-out;
 		white-space: nowrap;
 	}
-
-	nav ul li a:hover {border-color: var(--blueberry);}
-
-	nav ul li a:hover::before { opacity: 1; }
 
 	:global(nav a.active) {
 		font-weight: 800;
@@ -131,14 +126,5 @@
 			background-color: var(--turquoise);
 			color: var(--blueberry) !important;;
 		}
-	}
-
-	@media (min-width: 22em) {
-		nav { font-size: 1rem; }
-	}
-
-	@media (min-width: 42em) {
-		nav { margin-bottom: 0; }
-		nav ul a { transform: rotate(-5deg); }
 	}
 </style>

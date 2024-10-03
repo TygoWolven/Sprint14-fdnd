@@ -50,7 +50,7 @@
 	}
 
 	:global(section.semester h2 a.anchor) {
-		margin-left: -1em !important;
-		margin-top: 0.1em !important;
+		margin-left: -1em;
+		margin-top: 0.1em;
 	}
 </style>
