@@ -19,7 +19,11 @@ Volg deze stappen om het project lokaal op te zetten:
    ```bash
    npm install
 
-4. Start de ontwikkelserver:
+4. Switch naar de programma.dev.fdnd.nl
+   ```bash
+   git checkout programma.dev.fdnd.nl
+   ```
+6. Start de ontwikkelserver:
    ```bash
    npm run dev
    ```
