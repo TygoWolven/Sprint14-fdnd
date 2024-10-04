@@ -1,5 +1,6 @@
 <script>
     import Program from '$lib/components/program/Program.svelte';
+    import Semesters from '$lib/components/program/Semesters.svelte';
 
     export let data
 
@@ -8,3 +9,4 @@
 </script>
 
 <Program {title} {content} />
+<Semesters {subtitle} {semesters} />
