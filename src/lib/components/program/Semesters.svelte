@@ -42,7 +42,7 @@
 	section {
 		position: relative;
 		margin: 2rem 0 0;
-		width: 105%;
+		width: 100%;
 		padding: 0;
 		overflow-x: hidden;
 	}

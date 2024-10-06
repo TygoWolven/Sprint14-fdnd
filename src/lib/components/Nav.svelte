@@ -39,34 +39,72 @@
 <style>
 	header {
 		width: 100%;
-		height: 3.5em;
+		height: 1.75em;
 		background-color: var(--lavender);
 	}
+
+	header::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+		height: 1.95em;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: calc(var(--shadow) * -1.75);
+        border: 1px solid var(--lavender);
+    }
 
 	nav {
 		position: sticky;
 		display: flex;
 		align-items: baseline;
 		justify-content: center;
-		width: 45%;
-		height: 4em;
-		margin: 0 auto 3em auto;
-		padding: 0.25em;
+		width: 25%;
+		height: 3.75em;
+		margin: -.05em auto 3em auto;
 		background-color: var(--lavender);
 		color: var(--attention);
 		border-radius: 0 0 120px 120px;
 		flex-wrap: nowrap;
 		font-size: 0.8rem;
+		z-index: 2;
+	}
+
+	@media (max-width:750px){
+		nav{
+			width: 75%;
+		}
+	}
+
+	@media (min-width:750px) and (max-width:1000px){
+		nav{
+			width: 50%;
+		}
+	}
+
+	nav::before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		height: 3.95em;
+		top: 0;
+		left: calc(var(--shadow) * -1.75);
+		right: calc(var(--shadow) * -1.75);
+		bottom: calc(var(--shadow) * -1.75);
+		border: 1px solid var(--lavender);
+		border-radius: 0 0 120px 120px;
 	}
 
 	nav ul {
 		display: flex;
 		justify-content: center;
-		gap: 1.5em;
+		gap: 1.75em;
+		padding-inline: 0;
 		font-weight: 600;
 		list-style-type: none;
 		align-items: baseline;
-		margin: -0.5em 0;
+		margin-top: -1em;
 	}
 
 	nav ul li a {
@@ -80,6 +118,7 @@
 		white-space: nowrap;
 		text-decoration: none;
 		margin-left: var(--shadow);
+		color: var(--attention);
 	}
 
 	header nav ul li h1 {
@@ -92,4 +131,27 @@
 		margin: 0;
 		border-radius: var(--rounded);
 	}
+
+	nav ul li a.active {
+		background-color: var(--attention);
+		color: var(--white);
+		padding: .25em .75em;
+	}
+
+	nav ul li a.active::before {
+		content: '';
+		position: absolute;
+		height: 30px;
+		z-index: -1;
+		top: calc(var(--shadow) * .75);
+		left: calc(var(--shadow) * -.75);
+		right: calc(var(--shadow) * .75);
+		bottom: calc(var(--shadow) * -.75);
+		border: 1px solid var(--attention);
+		border-radius: 12px;
+	}
+
+	/* nav ul li a:hover{
+		 Hier komt animatie om de knop in te drukken
+	} */
 </style>

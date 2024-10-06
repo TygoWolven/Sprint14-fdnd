@@ -41,5 +41,6 @@ section a {
 }
 a:focus {
     outline:none;
-    background: var(--turquoise);  
+    background: var(--attention);  
+    color: var(--white);
 }

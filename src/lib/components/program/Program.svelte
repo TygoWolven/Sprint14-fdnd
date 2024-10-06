@@ -16,6 +16,7 @@
         background-color: var(--lavender);
         color: var(--attention);
         border: 1px solid var(--lavender);
+        border-radius: var(--rounded);
         margin-inline: .05em auto;
         margin-top: 0.25rem;
 		margin-bottom: 1.25rem;
