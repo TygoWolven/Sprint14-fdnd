@@ -1,64 +1,72 @@
 <script>
 	import { page } from '$app/stores';
 
-  	let navItems = [
-    {
-      href: '/static-web/the-client',
-      title: 'Sprint 2'
-    },
-	{
-		href: '/',
-		title: 'FDND'
-	},
-    {
-      href: '/workflow-tooling-frameworks/lose-your-head',
-      title: 'Sprint 14'
-    },
-  ];
+	let navItems = [
+		{
+			href: '/static-web/the-client',
+			title: 'Sprint 2'
+		},
+		{
+			href: '/',
+			title: 'FDND'
+		},
+		{
+			href: '/workflow-tooling-frameworks/lose-your-head',
+			title: 'Sprint 14'
+		}
+	];
 
-  const [firstItem, secondItem, thirdItem] = navItems;
+	const [firstItem, secondItem, thirdItem] = navItems;
 </script>
 
-<header>
-    <nav>
-      <ul>
-        <li>
-          <a class:active={$page.url.pathname === firstItem.href} href={firstItem.href} target="_self">{firstItem.title}</a>
-        </li>
-        <li>
+<header />
+<nav>
+	<ul>
+		<li>
+			<a class:active={$page.url.pathname === firstItem.href} href={firstItem.href} target="_self" >{firstItem.title}</a>
+		</li>
+		<li>
 			<h1>
-        		<a class:active={$page.url.pathname === secondItem.href} href={secondItem.href} target="_self"> {secondItem.title} </a>
+				<a class:active={$page.url.pathname === secondItem.href} href={secondItem.href} target="_self"> {secondItem.title} </a>
 			</h1>
-        </li>
-        <li>
-          <a class:active={$page.url.pathname === thirdItem.href} href={thirdItem.href} target="_self">{thirdItem.title}</a>
-        </li>
-      </ul>
-    </nav>
-</header>
-
+		</li>
+		<li>
+			<a class:active={$page.url.pathname === thirdItem.href} href={thirdItem.href} target="_self">{thirdItem.title}</a>
+		</li>
+	</ul>
+</nav>
 
 <style>
 	header {
+		width: 100%;
+		height: 3.5em;
+		background-color: var(--lavender);
+	}
+
+	nav {
+		position: sticky;
 		display: flex;
 		align-items: baseline;
 		justify-content: center;
-		width: 55%;
-		margin: -2.25em auto 2.75em auto;
-		padding: 0.75em;
+		width: 45%;
+		height: 4em;
+		margin: 0 auto 3em auto;
+		padding: 0.25em;
 		background-color: var(--lavender);
 		color: var(--attention);
 		border-radius: 0 0 120px 120px;
 		flex-wrap: nowrap;
+		font-size: 0.8rem;
 	}
-
-	nav { font-size: 0.8rem; }
 
 	nav ul {
 		display: flex;
-		justify-content: center	;
+		justify-content: center;
 		gap: 1.5em;
 		font-weight: 600;
+		list-style-type: none;
+		align-items: baseline;
+		margin: -0.5em 0;
 	}
 
 	nav ul li a {
@@ -74,34 +82,14 @@
 		margin-left: var(--shadow);
 	}
 
-	header nav ul li h1{
+	header nav ul li h1 {
 		position: relative;
-		color: var(--attention);
+		color: var(--white);
 		font-size: 1.2rem;
 		font-weight: 600;
 		letter-spacing: -0.06em;
 		padding: 0 0.75em;
 		margin: 0;
 		border-radius: var(--rounded);
-	}
-
-	:global(nav a.active) {
-		font-weight: 800;
-		background-color: var(--attention);
-		color: var(--lavender);
-	}
-
-	@media (max-width: 750px) {
-		header {
-			width: 105%;
-			margin-inline: -8px;
-			margin-top: -2.25em;
-		}
-
-		nav ul { font-size: 0.75em; }
-	}
-
-	@media (min-width: 1080px) {
-		header { width: 35%; }
 	}
 </style>

@@ -17,12 +17,9 @@
 
 <style>
 	:global(body) {
-		padding-top: 2.5rem;
-	}
-
-	:global(body), :global(body main) {
 		display: block;
 		background-color: unset;
+		margin: 0;
 	}
 
 	:global(body:before) {
