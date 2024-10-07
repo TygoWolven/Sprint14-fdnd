@@ -15,7 +15,9 @@
 			title: 'Sprint 14'
 		}
 	];
-
+	
+	const [firstItem, secondItem, thirdItem] = navItems;
+	
 	import logo from '$lib/assets/HvA-logo.png';
 </script>
 
@@ -27,22 +29,29 @@
 	<div>
 		<a href="/">
 			<h1>
-				<a class:active={$page.url.pathname === secondItem.href} href={secondItem.href} target="_self"> {secondItem.title} </a>
+				<a
+					class:active={$page.url.pathname === secondItem.href}
+					href={secondItem.href}
+					target="_self"
+				>
+					{secondItem.title}
+				</a>
 			</h1>
 		</a>
 		<nav>
 			<h2>Menu</h2>
 			<ul>
-				{#each navItems as item }
+				{#each navItems as item}
 					<li>
-						<a class:active={$page.url.pathname === item.href} href={item.href} target="_self">{item.title}</a>
+						<a class:active={$page.url.pathname === item.href} href={item.href} target="_self"
+							>{item.title}</a
+						>
 					</li>
 				{/each}
 			</ul>
 		</nav>
 	</div>
 </header>
-
 
 <style>
 	a {
@@ -51,8 +60,8 @@
 		padding: 0 1.5em;
 	}
 
-	h1 { 
-		margin: 0; 
+	h1 {
+		margin: 0;
 	}
 
 	h1 > abbr {
@@ -84,9 +93,9 @@
 	}
 
 	header div {
-		display:flex;
+		display: flex;
 		max-width: var(--max-width);
-		flex-wrap:nowrap;
+		flex-wrap: nowrap;
 		align-items: baseline;
 		justify-content: space-between;
 		margin-left: 2em;
@@ -161,40 +170,44 @@
 		}
 
 		:global(nav a.active) {
-			color: var(--blueberry) !important;;
+			color: var(--blueberry) !important;
 		}
 	}
 
 	@media (min-width: 22em) {
-		nav { font-size: 1rem; }
+		nav {
+			font-size: 1rem;
+		}
 	}
 
 	a {
-        position: relative;
-        z-index: 1;
-        border: 1px solid var(--attention);
-        padding: .75rem;
-        background-color: var(--white);
-        border-radius: 10px;
-        color: var(--attention);
-        font-weight: 700;
-        text-decoration: none;
-    }
+		position: relative;
+		z-index: 1;
+		border: 1px solid var(--attention);
+		padding: 0.75rem;
+		background-color: var(--white);
+		border-radius: 10px;
+		color: var(--attention);
+		font-weight: 700;
+		text-decoration: none;
+	}
 
-	a:focus-visible, a:hover {
+	a:focus-visible,
+	a:hover {
 		background-color: var(--call-to-action);
 		right: 1px;
-        top: 1px;
-		transition: all .4s ease-out;
+		top: 1px;
+		transition: all 0.4s ease-out;
 	}
 
-	a:focus-visible::after, a:hover::after {
+	a:focus-visible::after,
+	a:hover::after {
 		background-color: #b1b073;
 		right: 1px;
-        top: 1px;
+		top: 1px;
 	}
 
-	a.active{
+	a.active {
 		background-color: var(--turquoise);
 		color: var(--attention);
 	}
@@ -203,17 +216,17 @@
 		background-color: #5c9c89;
 	}
 
-    a::after {
-        content: "";
-        z-index: -1;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border: 1px solid var(--attention);
-        background-color: var(--white);
-        border-radius: 10px;
-        color: var(--attent);
-        right: 2px;
-        top: 2px;
-    }
+	a::after {
+		content: '';
+		z-index: -1;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		border: 1px solid var(--attention);
+		background-color: var(--white);
+		border-radius: 10px;
+		color: var(--attent);
+		right: 2px;
+		top: 2px;
+	}
 </style>
