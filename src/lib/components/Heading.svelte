@@ -24,7 +24,7 @@
 
 <style>
 	h2 {
-		font-weight: normal;
+		font-weight: bold;
 		letter-spacing: -0.04em;
 		margin: 0;
 		font-weight: 600;

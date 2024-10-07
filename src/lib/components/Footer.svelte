@@ -1,3 +1,8 @@
+<script>
+	// Aggregate *.fdnd.nl names from github.com/fdnd
+	import logo from '$lib/assets/Creating-logo.png' 
+</script>
+
 <footer>
 	<nav>
 		<h2>Archief</h2>
@@ -27,9 +32,67 @@
 	</nav>
 </footer>
 
+<img alt="Hogeschool van Amsterdam" src={logo} />
+
 <style>
 	footer {
+		display: flex;
+		justify-content: center;
 		font-size: 1rem;
-		padding: 2rem 0;
+		padding: 0 0 2rem 0;
+	}
+
+	img {
+		height: 80px;
+		margin-left: 2.2em;
+	}
+
+	h2 {
+		margin: 0;
+	}
+
+	p {
+		margin: 0 0 1em 0;
+		max-width: 58ch;
+	}
+
+	ul {
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 30em;
+	}
+
+	ul li {
+		padding: 0.7em 0.2em;
+	}
+
+	ul li a {
+		position: relative;
+		color: var(--blueberry);
+		font-weight: 900;
+		padding: 0.4em 0.6em;
+		border: 1px solid var(--blueberry);
+		border-radius: var(--rounded);
+		text-decoration: none;
+		background: var(--grey);
+	}
+
+	ul li a:hover {
+		text-decoration: underline;
+	}
+
+	ul li a::before {
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		border: 1px solid var(--blueberry);
+		border-radius: var(--rounded);
+		background: var(--grey);
+		z-index: -10;
+		top: 2px;
+		right: 2px;
 	}
 </style>

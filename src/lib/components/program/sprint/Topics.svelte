@@ -23,9 +23,13 @@
 </aside>
 
 <style>
-	aside { margin-top: 0.2em;  }
+	aside { 
+		margin-top: 0.2em; 
+	}
 
-	aside h3 {  display: none; }
+	aside h3 {
+		display: none;
+	}
 
 	aside ul {
 		margin: 0;

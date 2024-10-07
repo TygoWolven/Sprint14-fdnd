@@ -10,38 +10,28 @@
 </section>
 
 <style>
-    section {
-        position: relative;
-        max-width: 42rem;
-        background-color: var(--lavender);
-        color: var(--attention);
-        border: 1px solid var(--lavender);
-        border-radius: var(--rounded);
-        margin-inline: .05em auto;
-        margin-top: 0.25rem;
-		margin-bottom: 1.25rem;
-        padding: 1rem;
-    }
+	section {
+		position: relative;
+		background-color: var(--grey);
+		color: var(--blueberry);
+		border-radius: 15px 0 0 0;
+	}
 
     :global(section h2::selection, section p::selection) {
         background-color: var(--lavender);
         color: var(--lavender);
     }
 
-    section::after {
-        content: '';
-        position: absolute;
-        z-index: -1;
-        top: var(--shadow);
-        left: calc(var(--shadow) * -1.75);
-        right: var(--shadow);
-        bottom: calc(var(--shadow) * -1.75);
-        border: 1px solid var(--lavender);
-        border-radius: var(--rounded);
-    }
+	:global(section h2) {
+		font-size: 2.25rem;
+		padding: 3rem 0 0.5rem 3rem;
+	}
 
-    :global(section p) {
-        font-size: 1rem;
-        margin-top: 0.6em;
-    }
+	:global(section p) {
+		padding: 0 3em;
+		font-size: 1rem;
+		margin: 0;
+		max-width: 65ch;
+		letter-spacing: -0.04em;
+	}
 </style>
