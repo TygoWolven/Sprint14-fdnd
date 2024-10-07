@@ -98,6 +98,7 @@
 	nav h2 {
 		padding: -.25em;
 	}
+
 	nav::before {
 		content: '';
 		position: absolute;
@@ -146,14 +147,14 @@
 		border: none;
 	}
 	
-	li a:focus-visible, a:hover {
+	li a:focus-visible, li a:hover {
 		background-color: var(--call-to-action);
 		right: 1px;
         top: 1px;
 		transition: all .4s ease-out;
 	}
 
-	li a:focus-visible::after, a:hover::after {
+	li a:focus-visible::after, li a:hover::after {
 		background-color: #b1b073;
 		right: 1px;
     	top: 1px;
