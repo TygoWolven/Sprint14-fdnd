@@ -147,7 +147,6 @@
 		background-color: var(--call-to-action);
 		right: 1px;
         top: 2px;
-		transition: all .3s ease-out;
 	}
 
 	li a:focus-visible::before, li a:hover::before {
