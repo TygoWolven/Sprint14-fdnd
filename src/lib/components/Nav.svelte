@@ -81,59 +81,55 @@
 		margin-top: -1em;
 	}
 
-	nav ul li a {
-		position: relative;
-		font-size: 1.15rem;
-		transform: none;
-		display: inline-block;
-		padding: 0.25em 0.5em;
-		text-decoration: none;
-		white-space: nowrap;
-		text-decoration: none;
-		margin-left: var(--shadow);
+	h1{
+		font-size: 0.8rem;
+	}
+
+	a {
+        position: relative;
+        z-index: 1;
+        border: 1px solid var(--attention);
+        padding: .75rem;
+        background-color: var(--white);
+        border-radius: 10px;
+        color: var(--attention);
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+	a:focus-visible, a:hover {
+		background-color: var(--call-to-action);
+		right: 1px;
+        top: 1px;
+		transition: all .4s ease-out;
+	}
+
+	a:focus-visible::after, a:hover::after {
+		background-color: #b1b073;
+		right: 1px;
+        top: 1px;
+	}
+
+	a.active{
+		background-color: var(--turquoise);
 		color: var(--attention);
-		background-color: var(--lavender);
-		border-radius: 12px;
-		border: 1px solid var(--attention);
-		outline: none;
-		transition: all 0.3s ease-out; 
 	}
 
-	nav ul li a::before{
-		content: '';
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		border: 1px solid var(--attention);
-		border-radius: 12px;
-		top: calc(var(--shadow) * .85);
-		left: calc(var(--shadow) * -.85);
-		right: calc(var(--shadow) * -.75);
-		transition: all 0.3s ease-out;
+	a.active::after {
+		background-color: #5c9c89;
 	}
 
-	header nav ul li h1 {
-		position: relative;
-		color: var(--white);
-		font-size: 1.2rem;
-		font-weight: 600;
-		letter-spacing: -0.06em;
-		padding: 0 0.75em;
-		margin: 0;
-		border-radius: var(--rounded);
-	}
-
-	nav ul li a.active {
-		background-color: var(--attention);
-		color: var(--white);
-		padding: .25em .75em;
-		transform: translateY(1px);
-	}
-
-	nav ul li a:active, nav ul li a:focus {
-		background-color: var(--attention);
-		color: var(--white);	
-		transform: translateY(1px);
-	} 
+    a::after {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 1px solid var(--attention);
+        background-color: var(--white);
+        border-radius: 10px;
+        color: var(--attent);
+        right: 2px;
+        top: 2px;
+    }
 </style>
