@@ -73,13 +73,13 @@
 
 	@media (max-width:750px){
 		nav{
-			width: 75%;
+			width: 85%;
 		}
 	}
 
 	@media (min-width:750px) and (max-width:1000px){
 		nav{
-			width: 50%;
+			width: 60%;
 		}
 	}
 
@@ -119,6 +119,12 @@
 		text-decoration: none;
 		margin-left: var(--shadow);
 		color: var(--attention);
+		background-color: var(--lavender);
+		box-shadow: -4px 4px 0 0 var(--attention-background);
+		border-radius: 12px;
+		border: 1px solid var(--attention);
+		outline: none;
+		translate: all 0.3s ease-out; 
 	}
 
 	header nav ul li h1 {
@@ -136,22 +142,12 @@
 		background-color: var(--attention);
 		color: var(--white);
 		padding: .25em .75em;
+		transform: translateY(1px);
+		box-shadow: -2px 2px 0 0 var(--attention-background);
 	}
 
-	nav ul li a.active::before {
-		content: '';
-		position: absolute;
-		height: 30px;
-		z-index: -1;
-		top: calc(var(--shadow) * .75);
-		left: calc(var(--shadow) * -.75);
-		right: calc(var(--shadow) * .75);
-		bottom: calc(var(--shadow) * -.75);
-		border: 1px solid var(--attention);
-		border-radius: 12px;
-	}
-
-	/* nav ul li a:hover{
-		 Hier komt animatie om de knop in te drukken
-	} */
+	nav ul li a:active{
+		transform: translateY(1px);
+		box-shadow: -2px 2px 0 0 var(--attention-background);
+	} 
 </style>
