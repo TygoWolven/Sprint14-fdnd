@@ -17,10 +17,10 @@
 		border-radius: 15px 0 0 0;
 	}
 
-	:global(section h2::selection, section p::selection) {
-		background-color: var(--turquoise);
-		color: var(--blueberry);
-	}
+    :global(section h2::selection, section p::selection) {
+        background-color: var(--lavender);
+        color: var(--lavender);
+    }
 
 	:global(section h2) {
 		font-size: 2.25rem;
