@@ -95,6 +95,9 @@
 		margin-top: 3em;
 	}
 
+	nav h2 {
+		padding: -.25em;
+	}
 	nav::before {
 		content: '';
 		position: absolute;
@@ -110,23 +113,7 @@
 		display: flex;
 		font-weight: 500;
 		padding: 0 4em;
-	}
-
-	nav ul li a {
-		position: relative;
-		transform: none;
-		display: inline-block;
-		letter-spacing: -0.03em;
-		border-radius: 1em;
-		text-decoration: none;
-		transition: background 0.3s ease-out, color 0.3s ease-out;
-		white-space: nowrap;
-		color: var(--blueberry);
-		top: 3px;
-	}
-
-	nav ul li a:hover {
-		text-decoration: underline;
+		gap: 1em;
 	}
 
 	@media (max-width: 750px) {
@@ -160,38 +147,39 @@
 	}
 	
 	li a:focus-visible, a:hover {
-		background-color: #b1b073;
+		background-color: var(--call-to-action);
 		right: 1px;
         top: 1px;
 		transition: all .4s ease-out;
 	}
 
 	li a:focus-visible::after, a:hover::after {
-		background-color: var(--call-to-action);
+		background-color: #b1b073;
 		right: 1px;
-        top: 1px;
+    	top: 1px;
 	}
 
 	li a.active{
-		background-color: #5c9c89;
+		background-color: var(--turquoise);
+		color: var(--attention);
 	}
 
 	li a.active::after {
-		background-color: var(--turquoise);
+		background-color: #6dd2b4;
 		color: var(--attention);
 	}
 
     li a::after {
         content: "";
-        z-index: -1;
+        z-index: -10;
         position: absolute;
         width: 100%;
         height: 100%;
         border: 1px solid var(--attention);
         background-color: var(--white);
         border-radius: 10px;
-        color: var(--attention);
-        right: -2px;
-        top: -2px;
-    }
+        color: var(--attent);
+        right: 4px;
+        top: 4px;
+	}
 </style>
