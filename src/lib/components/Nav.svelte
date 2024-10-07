@@ -16,8 +16,6 @@
 		}
 	];
 
-	const [firstItem, secondItem, thirdItem] = navItems;
-
 	import logo from '$lib/assets/HvA-logo.png';
 </script>
 
@@ -27,11 +25,6 @@
 		<p>Frontend Design & Development</p>
 	</div>
 	<div>
-		<a href="/">
-			<h1>
-				<a class:active={$page.url.pathname === secondItem.href} href={secondItem.href} target="_self"> {secondItem.title} </a>
-			</h1>
-		</a>
 		<nav>
 			<h2>Menu</h2>
 			<ul>
@@ -51,10 +44,6 @@
 		text-decoration: none;
 		margin-left: var(--shadow);
 		padding: 0 1.5em;
-	}
-
-	h1 { 
-		margin: 0; 
 	}
 
 	header div {
@@ -92,7 +81,8 @@
 		background-color: var(--grey);
 		color: var(--blueberry);
 		border-radius: 15px 15px 0 0;
-		margin-top: 3em;
+		margin-top: 1em;
+		margin-inline: auto;
 	}
 
 	nav h2 {
@@ -110,6 +100,16 @@
 		box-shadow: 0.5em 0.5em 0 0 var(--grey);
 	}
 
+	nav::after {
+		content: '';
+		position: absolute;
+		width: 1.5em;
+		aspect-ratio: 1;
+		right: -1.5em;
+		border-radius: 0 0 0 50%;
+		bottom: 0;
+		box-shadow: -0.5em 0.5em 0 0 var(--grey);
+	}
 	nav ul {
 		display: flex;
 		font-weight: 500;
@@ -142,10 +142,6 @@
         font-weight: 700;
         text-decoration: none;
     }
-
-	h1 a {
-		border: none;
-	}
 	
 	li a:focus-visible, li a:hover {
 		background-color: var(--call-to-action);
