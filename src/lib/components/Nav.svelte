@@ -146,14 +146,14 @@
 	li a:focus-visible, li a:hover {
 		background-color: var(--call-to-action);
 		right: 1px;
-        top: 1px;
-		transition: all .4s ease-out;
+        top: 2px;
+		transition: all .3s ease-out;
 	}
 
-	li a:focus-visible::after, li a:hover::after {
+	li a:focus-visible::before, li a:hover::before {
 		background-color: #b1b073;
-		right: 1px;
-    	top: 1px;
+		right: 2px;
+    	top: 2px;
 	}
 
 	li a.active{
@@ -161,12 +161,21 @@
 		color: var(--attention);
 	}
 
-	li a.active::after {
-		background-color: #6dd2b4;
+	li a.active::before {
+		background-color: #56ad93;
 		color: var(--attention);
 	}
 
-    li a::after {
+	li a.active:hover, li a.active:focus-visible {
+		background-color: var(--call-to-action);
+		color: var(--attention);
+	}
+	li a.active:hover::before, li a.active:focus-visible::before {
+		background-color: #b1b073;
+		color: var(--attention);
+	}
+
+    li a::before {
         content: "";
         z-index: -10;
         position: absolute;
@@ -175,7 +184,7 @@
         border: 1px solid var(--attention);
         background-color: var(--white);
         border-radius: 10px;
-        color: var(--attent);
+        color: var(--attention);
         right: 4px;
         top: 4px;
 	}

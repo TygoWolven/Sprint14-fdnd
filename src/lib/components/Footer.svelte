@@ -86,13 +86,13 @@
 		transition: all .4s ease-out;
 	}
 
-	li a:focus-visible::after, li a:hover::after {
+	li a:focus-visible::before, li a:hover::before {
 		background-color: #b1b073;
 		right: 1px;
     	top: 1px;
 	}
 
-    li a::after {
+    li a::before {
         content: "";
         z-index: -10;
         position: absolute;
