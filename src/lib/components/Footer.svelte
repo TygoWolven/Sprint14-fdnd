@@ -1,5 +1,6 @@
 <script>
 	// Aggregate *.fdnd.nl names from github.com/fdnd
+	import logo from '$lib/assets/Creating-logo.png' 
 </script>
 
 <footer>
@@ -32,86 +33,67 @@
 	</nav>
 </footer>
 
+<img alt="Hogeschool van Amsterdam" src={logo} />
+
 <style>
 	footer {
+		display: flex;
+		justify-content: center;
 		font-size: 1rem;
-		padding: 2rem 0;
+		padding: 0 0 2rem 0;
 	}
 
-	.copy-construct {
-    	font-size: 1rem;
-    	padding-bottom: 2em;
+	img {
+		height: 80px;
+		margin-left: 2.2em;
+	}
+
+	h2 {
+		margin: 0;
+	}
+
+	p {
+		margin: 0 0 1em 0;
+		max-width: 58ch;
+	}
+
+	ul {
+		padding: 0;
+		margin: 0;
 		display: flex;
-		flex-flow: row-reverse wrap-reverse;
-		justify-content: flex-end;
-		align-content: flex-start;
-		align-items: flex-start;
-		gap: 1em;
+		flex-wrap: wrap;
+		max-width: 30em;
 	}
 
-	.copy-construct span {
-		display: block;
-		padding: 0 1em;
-		text-align: center;
-		line-height: 4;
-		height: 4em;
-		white-space: nowrap;
-		border-style: solid;
-		border-width: 1px;
-		border-radius: var(--pilled);
+	ul li {
+		padding: 0.7em 0.2em;
 	}
 
-	.copy-construct > span:nth-of-type(1) {
+	ul li a {
+		position: relative;
+		color: var(--blueberry);
+		font-weight: 900;
+		padding: 0.4em 0.6em;
+		border: 1px solid var(--blueberry);
 		border-radius: var(--rounded);
-		order: 8;
+		text-decoration: none;
+		background: var(--grey);
 	}
 
-	.copy-construct > span:nth-of-type(2) {
-		width: 4rem;
-		font-size: 2.5em;
-    	height: 4rem;
-		padding-left: 0.7em;
-		order: 7;
+	ul li a:hover {
+		text-decoration: underline;
 	}
 
-	.copy-construct > span:nth-of-type(3) {
-		display: flex;
-		justify-content: space-between;
-		width: 12em;
-		order: 6;
-	}
-
-	.copy-construct > span:nth-of-type(3) span {
-		margin-top: 0.25em;
-		margin-left: -0.75em;
-		line-height: 3.5em;
-		height: 3.5em;
-	}
-
-	.copy-construct > span:nth-of-type(4) {
-		width: 4em;
-		border-radius: 0;
-		order: 5;
-	}
-
-	.copy-construct > span:nth-of-type(5) {
-		flex-grow: 3;
-		order: 4;
-	}
-
-	.copy-construct > span:nth-of-type(6) {
-		flex-grow: 3;
-		width: 12em;
-		order: 3;
-	}
-
-	.copy-construct > span:nth-of-type(7) {
-		width: 4em;
-		order: 2;
-	}
-	
-	.copy-construct > span:nth-of-type(8) {
-		flex-grow: 5;
-		order: 1;
+	ul li a::before {
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		border: 1px solid var(--blueberry);
+		border-radius: var(--rounded);
+		background: var(--grey);
+		z-index: -10;
+		top: 2px;
+		right: 2px;
 	}
 </style>

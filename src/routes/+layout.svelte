@@ -17,12 +17,12 @@
 
 <style>
 	:global(body) {
-		padding-top: 2.5rem;
+		margin: 0 2em;
 	}
 
 	:global(body), :global(body main) {
 		display: block;
-		background-color: unset;
+		background-color: var(--lavender);
 	}
 
 	:global(body:before) {

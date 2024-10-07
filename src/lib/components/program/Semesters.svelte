@@ -30,23 +30,54 @@
 	{/if}
 
 	<div class="scroll-horo">
-		<span class="scroll-label visually-hidden">scroll >>> </span>
-
 		{#each semesters as semester, i}
 			<Semester {semester} {i} />
 		{/each}
 	</div>
 </section>
 
+<div class="fixed-bar"></div>
+
 <style>
 	section {
 		position: relative;
-		margin: 2rem 0 0;
 		width: 100%;
 		padding: 0;
+		background: var(--grey);
+		border-radius: 0 0 15px 15px;
+		color: var(--blueberry);
 	}
 
-	h2 { font-weight: normal; }
+	.fixed-bar {
+		width: 100%;
+		height: 2em;
+		background: var(--lavender);
+		position: sticky;
+		bottom: 0;
+	}
+
+	.fixed-bar::before,
+	.fixed-bar::after {
+		content: '';
+		position: absolute;
+		width: 1.5em;
+		aspect-ratio: 1;
+		left: 0;
+		border-radius: 0 0 50% 0;
+		bottom: 2em;
+		box-shadow: 0.5em 0.5em 0 0 var(--lavender);
+		transform: rotate(90deg);
+	}
+
+	.fixed-bar::after {
+		right: 0;
+		left: unset;
+		transform: unset;
+	}
+
+	h2 { 
+		margin: 0;
+	}
 
 	.scroll-horo {
 		overflow-x: auto;
@@ -55,22 +86,6 @@
 		flex-wrap: nowrap;
 		scroll-snap-type: x mandatory;
 		padding: 1rem 2rem 2rem;
-		margin-left: -1rem;
-		margin-right: -1rem;
-	}
-
-	@media (min-width: 50rem) {
-		.scroll-horo {
-			margin-left: -2rem;
-			margin-right: -2rem;
-		}
-	}
-
-	.scroll-label {
-		position: absolute;
-		top: 0;
-		right: 1rem;
-		background: var(--call-to-action);
 	}
 
 	input[type='checkbox'].toggle {
@@ -89,14 +104,14 @@
 		color: white;
 		font-family: helvetica;
 		font-size: 1em;
-		margin-left: 1.5rem;
+		margin-left: 3rem;
 	}
 
 	input[type='checkbox'].toggle + label::before {
 		content: '';
 		width: 3rem;
 		height: 1.325rem;
-		border: solid 1px var(--turquoise);
+		border: solid 1px var(--blueberry);
 		border-radius: var(--pilled);
 		transition: background-color 200ms ease-in-out;
 	}
@@ -107,8 +122,8 @@
 		width: 1.5rem;
 		height: 1.5rem;
 		background-color: var(--blueberry);
-		color: var(--turquoise);
-		border: solid 1px var(--turquoise);
+		color: var(--blueberry);
+		border: solid 1px var(--blueberry);
 		border-radius: var(--pilled);
 		font-weight: normal;
 		font-size: 0.9em;
@@ -123,23 +138,23 @@
 	input[type='checkbox'].toggle:checked + label::after {
 		content: '';
 		transform: translateX(1.5em);
-		background-color: var(--turquoise);
+		background-color: var(--blueberry);
 		color: var(--blueberry);
 	}
 
 	input[type='checkbox'].toggle:hover + label::after, input[type='checkbox'].toggle:focus + label::after, input[type='checkbox'].toggle:checked:hover + label::after {
-		background-color: var(--turquoise);
+		background-color: var(--blueberry);
 		color: var(--blueberry);
 	}
 
 	input[type='checkbox'].toggle:checked + label::before {
-		background-color: var(--turquoise);
+		background-color: var(--blueberry);
 		opacity: 0.5;
-		border-color: var(--turquoise);
+		border-color: var(--blueberry);
 	}
 
 	label span {
-		color: var(--turquoise);
+		color: var(--blueberry);
 		margin-left: 0.5em;
 		font-size: 0.7em;
 	}

@@ -87,7 +87,13 @@
 		max-width: 42rem;
 		padding: 1rem;
 
-		& p, & li {
+		& p {
+			display: flex;
+			align-items: flex-end;
+			justify-content: space-between;
+		}
+		
+		& li {
 			display: flex;
 			align-items: flex-end;
 			justify-content: space-between;
