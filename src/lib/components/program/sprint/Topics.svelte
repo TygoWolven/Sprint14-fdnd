@@ -25,8 +25,6 @@
 </aside>
 
 <style>
-	aside {
-		margin-top: 0.2em;
 	}
 
 	aside ul {
@@ -37,7 +35,7 @@
 		row-gap: 0.1rem;
 	}
 
-	aside li {
+	aside ul li {
 		list-style: none;
 		padding: 0.1rem 0.5rem;
 		white-space: nowrap;

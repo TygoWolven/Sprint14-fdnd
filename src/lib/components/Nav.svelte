@@ -1,27 +1,33 @@
 <script>
 	import { page } from '$app/stores';
-	$: navItems = [
-		{
-			href: '/',
-			title: 'Programma 2425'
-		},
+
+	let navItems = [
 		{
 			href: '/static-web/the-client',
 			title: 'Sprint 2'
 		},
 		{
+			href: '/',
+			title: 'FDND'
+		},
+		{
 			href: '/workflow-tooling-frameworks/lose-your-head',
 			title: 'Sprint 14'
-		},
-	]
+		}
+	];
 
+	import logo from '$lib/assets/HvA-logo.png';
 </script>
 
 <header>
 	<div>
+		<img alt="The project logo" src={logo} />
+		<p>Frontend Design & Development</p>
+	</div>
+	<div>
 		<a href="/">
 			<h1>
-				<abbr title="Frontend Design &amp; Development"> <span>FDND</span> </abbr>
+				<a class:active={$page.url.pathname === secondItem.href} href={secondItem.href} target="_self"> {secondItem.title} </a>
 			</h1>
 		</a>
 		<nav>
@@ -35,7 +41,6 @@
 			</ul>
 		</nav>
 	</div>
-	
 </header>
 
 
@@ -43,114 +48,119 @@
 	a {
 		text-decoration: none;
 		margin-left: var(--shadow);
+		padding: 0 1.5em;
 	}
 
-	h1 { margin: 0; }
+	h1 { 
+		margin: 0; 
+	}
 
 	h1 > abbr {
 		position: relative;
 		color: var(--blueberry);
-		font-size: 1.2rem;
-		font-weight: 600;
-		letter-spacing: -0.06em;
-		padding: 0.3em 0.2em;
+		font-size: 1.4rem;
+		font-weight: 900;
+		letter-spacing: -0.1em;
+		padding: 0.2em 0.4em;
 		border: 1px solid var(--blueberry);
 		border-radius: var(--rounded);
-	}
-
-	@media (max-width: 750px) {
-		h1 > abbr { color: var(--turquoise); }
-
+		text-decoration: none;
+		background: var(--grey);
+		left: 15px;
+		bottom: 3.1em;
 	}
 
 	h1 > abbr::before {
 		content: '';
+		width: 100%;
+		height: 100%;
 		position: absolute;
-		top: var(--shadow);
-		left: calc(var(--shadow) * -1);
-		right: var(--shadow);
-		bottom: calc(var(--shadow) * -1);
-		border: 1px solid currentColor;
+		border: 1px solid var(--blueberry);
 		border-radius: var(--rounded);
-		display:none;
-	}
-
-	header {
-		display:flex;
-		max-width: var(--max-width);
-		margin: auto;
+		background: var(--grey);
+		z-index: -10;
+		top: 2px;
+		right: 2px;
 	}
 
 	header div {
-		display: flex;
-		gap: 1em;
-		align-items: baseline;
-		justify-content: flex-start;
-		padding: 0.5em 0.7em calc(0.5em + var(--shadow));
-		background-color: var(--turquoise);
-		color: var(--blueberry);
-		border-radius: var(--rounded);
+		display:flex;
+		max-width: var(--max-width);
 		flex-wrap:nowrap;
+		align-items: baseline;
+		justify-content: space-between;
+		margin-left: 2em;
 	}
 
-	@media (max-width: 750px) {
-		header div {
-			background-color: transparent;
-			padding: 0;
-			gap: 1em;
-		}
+	header div:first-of-type {
+		justify-content: start;
+		align-items: center;
+		padding-bottom: 1em;
+	}
+
+	header img {
+		height: 90px;
+		margin-top: 0.2em;
+		margin-right: -1.7em;
+	}
+
+	header p {
+		color: var(--blueberry);
+		border-left: 1px solid var(--blueberry);
+		padding: 0 1em;
+		font-size: 1.2em;
+		letter-spacing: -0.03em;
 	}
 
 	nav {
+		position: relative;
 		font-size: 0.8rem;
-		width: 80vw;
+		background-color: var(--grey);
+		color: var(--blueberry);
+		border-radius: 15px 15px 0 0;
+		margin-top: 3em;
 	}
 
-	h2 {
+	nav::before {
+		content: '';
 		position: absolute;
-		text-indent: -9999px;
+		width: 1.5em;
+		aspect-ratio: 1;
+		left: -1.5em;
+		border-radius: 0 0 50% 0;
+		bottom: 0;
+		box-shadow: 0.5em 0.5em 0 0 var(--grey);
 	}
-	ul {
+
+	nav ul {
 		display: flex;
-		gap: 1em;
-		font-weight: 600;
+		font-weight: 500;
+		padding: 0 4em;
 	}
 
 	nav ul li a {
 		position: relative;
 		transform: none;
 		display: inline-block;
-		padding: 0.3em 0.8em;
+		letter-spacing: -0.03em;
 		border-radius: 1em;
 		text-decoration: none;
 		transition: background 0.3s ease-out, color 0.3s ease-out;
-		border: 1px solid var(--turquoise);
 		white-space: nowrap;
-	}
-	nav ul li a:hover {border-color: var(--blueberry);}
-
-	nav ul li a:hover::before {
-		opacity: 1;
+		color: var(--blueberry);
+		top: 3px;
 	}
 
-	:global(nav a.active) {
-		font-weight: 800;
-		background-color: var(--blueberry);
-		color: var(--turquoise);
+	nav ul li a:hover {
+		text-decoration: underline;
 	}
 
 	@media (max-width: 750px) {
 		nav ul {
 			font-size: 0.75em;
-			color: var(--turquoise);
-		}
-
-		nav ul li a:hover {
-			border-color: var(--turquoise);
 		}
 
 		:global(nav a.active) {
-			background-color: var(--turquoise);
 			color: var(--blueberry) !important;;
 		}
 	}
@@ -159,8 +169,51 @@
 		nav { font-size: 1rem; }
 	}
 
-	@media (min-width: 42em) {
-		nav { margin-bottom: 0; }
-		nav ul a { transform: rotate(-5deg); }
+	a {
+        position: relative;
+        z-index: 1;
+        border: 1px solid var(--attention);
+        padding: .75rem;
+        background-color: var(--white);
+        border-radius: 10px;
+        color: var(--attention);
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+	a:focus-visible, a:hover {
+		background-color: var(--call-to-action);
+		right: 1px;
+        top: 1px;
+		transition: all .4s ease-out;
 	}
+
+	a:focus-visible::after, a:hover::after {
+		background-color: #b1b073;
+		right: 1px;
+        top: 1px;
+	}
+
+	a.active{
+		background-color: var(--turquoise);
+		color: var(--attention);
+	}
+
+	a.active::after {
+		background-color: #5c9c89;
+	}
+
+    a::after {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 1px solid var(--attention);
+        background-color: var(--white);
+        border-radius: 10px;
+        color: var(--attent);
+        right: 2px;
+        top: 2px;
+    }
 </style>

@@ -96,11 +96,18 @@
 		padding: 1rem;
 	}
 
-	section.tasks p {
-		display: flex;
-		align-items: flex-end;
-		justify-content: space-between;
-	}
+		& p {
+			display: flex;
+			align-items: flex-end;
+			justify-content: space-between;
+		}
+		
+		& li {
+			display: flex;
+			align-items: flex-end;
+			justify-content: space-between;
+		}
+
 
 	section.tasks a {
 		text-transform: capitalize;

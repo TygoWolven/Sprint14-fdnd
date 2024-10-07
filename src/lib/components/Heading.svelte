@@ -1,10 +1,10 @@
 <script>
 	import IconLink from '$lib/components/icons/Link.svelte';
 	
-  export let title,
+  	export let title,
 		subtitle = '';
 
-  let id = title
+  	let id = title
 		.replace(/[^\w\s]/gi, '')
 		.replace(/\s+/g, '-')
 		.toLowerCase();
@@ -24,9 +24,10 @@
 
 <style>
 	h2 {
-		font-weight: normal;
+		font-weight: bold;
 		letter-spacing: -0.04em;
 		margin: 0;
+		font-weight: 600;
 	}
 
 	h2 a.anchor {
@@ -49,7 +50,7 @@
 	}
 
 	:global(section.semester h2 a.anchor) {
-		margin-left: -1em !important;
-		margin-top: 0.1em !important;
+		margin-left: -1em;
+		margin-top: 0.1em;
 	}
 </style>

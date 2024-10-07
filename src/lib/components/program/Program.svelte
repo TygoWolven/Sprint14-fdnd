@@ -12,39 +12,26 @@
 <style>
 	section {
 		position: relative;
-		max-width: 48rem;
-		background-color: var(--blueberry);
-		color: var(--turquoise);
-		border: 1px solid var(--turquoise);
-		margin-left: var(--shadow);
-		margin-top: 1.5rem;
-		padding: 1rem;
-		grid-column: 1 / 2;
-	}
-	
-	@media (max-width: 750px) {
-		section { width: 100%; }
-	}
-
-	:global(section h2::selection, section p::selection) {
-		background-color: var(--turquoise);
+		background-color: var(--grey);
 		color: var(--blueberry);
+		border-radius: 15px 0 0 0;
 	}
 
-	section::after {
-		content: '';
-		position: absolute;
-		z-index: -1;
-		top: var(--shadow);
-		left: calc(var(--shadow) * -1);
-		right: var(--shadow);
-		bottom: calc(var(--shadow) * -1);
-		border: 1px solid currentColor;
-		border-radius: var(--rounded);
+    :global(section h2::selection, section p::selection) {
+        background-color: var(--lavender);
+        color: var(--lavender);
+    }
+
+	:global(section h2) {
+		font-size: 2.25rem;
+		padding: 3rem 0 0.5rem 3rem;
 	}
 
 	:global(section p) {
+		padding: 0 3em;
 		font-size: 1rem;
-		margin-top: 0.6em;
+		margin: 0;
+		max-width: 65ch;
+		letter-spacing: -0.04em;
 	}
 </style>

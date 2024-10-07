@@ -54,6 +54,7 @@
 	}
 
 	section.semester > a {
+		color: var(--blueberry);
 		text-decoration: none;
 		display: inline-block;
 		margin: 0 0 0.5rem;
@@ -62,7 +63,6 @@
 	section.semester > a:focus { color: var(--blueberry); }
 
 	ol {
-		border: 1px var(--turquoise) solid;
 		border-radius: var(--rounded);
 		list-style: none;
 		margin: 1rem 0.25rem 0;
