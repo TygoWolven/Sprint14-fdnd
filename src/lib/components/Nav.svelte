@@ -16,12 +16,14 @@
 		}
 	];
 
+	const [firstItem, secondItem, thirdItem] = navItems;
+
 	import logo from '$lib/assets/HvA-logo.png';
 </script>
 
 <header>
 	<div>
-		<img alt="The project logo" src={logo} />
+		<img alt="" src={logo} />
 		<p>Frontend Design & Development</p>
 	</div>
 	<div>
@@ -53,34 +55,6 @@
 
 	h1 { 
 		margin: 0; 
-	}
-
-	h1 > abbr {
-		position: relative;
-		color: var(--blueberry);
-		font-size: 1.4rem;
-		font-weight: 900;
-		letter-spacing: -0.1em;
-		padding: 0.2em 0.4em;
-		border: 1px solid var(--blueberry);
-		border-radius: var(--rounded);
-		text-decoration: none;
-		background: var(--grey);
-		left: 15px;
-		bottom: 3.1em;
-	}
-
-	h1 > abbr::before {
-		content: '';
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		border: 1px solid var(--blueberry);
-		border-radius: var(--rounded);
-		background: var(--grey);
-		z-index: -10;
-		top: 2px;
-		right: 2px;
 	}
 
 	header div {
@@ -172,38 +146,42 @@
 	a {
         position: relative;
         z-index: 1;
-        border: 1px solid var(--attention);
         padding: .75rem;
         background-color: var(--white);
         border-radius: 10px;
+		border: 1px solid var(--attention);
         color: var(--attention);
         font-weight: 700;
         text-decoration: none;
     }
 
-	a:focus-visible, a:hover {
-		background-color: var(--call-to-action);
+	h1 a {
+		border: none;
+	}
+	
+	li a:focus-visible, a:hover {
+		background-color: #b1b073;
 		right: 1px;
         top: 1px;
 		transition: all .4s ease-out;
 	}
 
-	a:focus-visible::after, a:hover::after {
-		background-color: #b1b073;
+	li a:focus-visible::after, a:hover::after {
+		background-color: var(--call-to-action);
 		right: 1px;
         top: 1px;
 	}
 
-	a.active{
+	li a.active{
+		background-color: #5c9c89;
+	}
+
+	li a.active::after {
 		background-color: var(--turquoise);
 		color: var(--attention);
 	}
 
-	a.active::after {
-		background-color: #5c9c89;
-	}
-
-    a::after {
+    li a::after {
         content: "";
         z-index: -1;
         position: absolute;
@@ -212,8 +190,8 @@
         border: 1px solid var(--attention);
         background-color: var(--white);
         border-radius: 10px;
-        color: var(--attent);
-        right: 2px;
-        top: 2px;
+        color: var(--attention);
+        right: -2px;
+        top: -2px;
     }
 </style>

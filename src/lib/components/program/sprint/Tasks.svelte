@@ -86,37 +86,37 @@
 	section.tasks {
 		max-width: 42rem;
 		padding: 1rem;
-
-		& p {
-			display: flex;
-			align-items: flex-end;
-			justify-content: space-between;
-		}
-		
-		& li {
-			display: flex;
-			align-items: flex-end;
-			justify-content: space-between;
-		}
-
-		& a {
-			text-transform: capitalize;
-			display: flex;
-			flex-wrap: nowrap;
-			justify-content: flex-start;
-			align-items: center;
-			white-space: nowrap;
-			text-overflow: ellipsis;
-			overflow: hidden;
-		}
-
-		& small {
-			margin-left: 0.25rem;
-			padding: 0 0.1rem;
-			transform: translateY(-5px);
-			white-space: nowrap;
-		}
 	}
+	section.tasks p {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+	}
+		
+	section.task li {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+	}
+
+	section.task a {
+		text-transform: capitalize;
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-items: center;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+
+	section.task small {
+		margin-left: 0.25rem;
+		padding: 0 0.1rem;
+		transform: translateY(-5px);
+		white-space: nowrap;
+	}
+
 
 	@media (max-width: 750px) {
 		section.tasks { width: 100%; }
@@ -157,8 +157,9 @@
 	section.showcase {
 		display: none;
 		display: block;
-
-		& ul {
+	}
+	
+	section.showcase ul {
 		display: flex;
 		gap: 1rem;
 		margin: 0 -1rem;
@@ -166,8 +167,9 @@
 		overflow: auto;
 		scroll-snap-type: x mandatory;
 		padding-bottom: 1rem;
-
-			& li {
+	}
+	
+	section.showcase ul li {
 				display: flex;
 				flex-wrap: wrap;
 				margin-top: 1rem;
@@ -180,8 +182,6 @@
 				scroll-snap-align: center;
 				gap: 0.25rem;
 			}
-		}
-	}
 
 	section.stargazer { display: block; }
 
@@ -200,21 +200,20 @@
 		gap: 0.2em;
 		text-transform: uppercase;
 		flex-wrap: wrap;
-
-		& a {
+	}
+		.links a {
 			border: 1px solid currentColor;
 			border-radius: 1rem;
 			padding: 0.2em 0.4em;
 			line-height: 1;
 			text-decoration: none;
 			font-size: 0.6em;
-
-			& :hover {
+		}
+			.links a:hover {
 				background-color: var(--lavender);
 				color: var(--blueberry);
 			}
-		} 
-	}
+
 	.profile {
 		position: relative;
 		width: 100%;
@@ -226,14 +225,13 @@
 		gap: 0.5rem;
 		padding: 0.5rem 0;
 		margin: 0;
-
-		& a {
+	}
+		.profile a {
 			text-decoration: none;
 			font-size: 0.7em;
 			display: block;
 			padding: 0;
 		}
-	}
 
 	.profile::before {
 		content: '';
