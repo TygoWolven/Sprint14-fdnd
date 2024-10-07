@@ -60,7 +60,7 @@
 		display: flex;
 		align-items: baseline;
 		justify-content: center;
-		width: 25%;
+		width: 40%;
 		height: 3.75em;
 		margin: -.05em auto 3em auto;
 		background-color: var(--lavender);
@@ -73,11 +73,11 @@
 
 	@media (max-width:750px){
 		nav{
-			width: 85%;
+			width: 90%;
 		}
 	}
 
-	@media (min-width:750px) and (max-width:1000px){
+	@media (min-width:750px) and (max-width:1024px){
 		nav{
 			width: 60%;
 		}
