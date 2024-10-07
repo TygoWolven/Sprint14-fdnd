@@ -32,16 +32,22 @@
 
 			{#each tasks as task}
 				{#if task.topic == 'task'}
-					<p> <a href={task.url} data-sveltekit-prefetch>{task.name}</a> <small class="blue-on-green">{task.forkCount} forks</small> </p>
-					<p> {task.description} </p>
+					<p>
+						<a href={task.url} data-sveltekit-prefetch>{task.name}</a>
+						<small class="blue-on-green">{task.forkCount} forks</small>
+					</p>
+					<p>{task.description}</p>
 				{/if}
 			{/each}
 
 			<h3 class="subtasks">Deeltaken</h3>
 			{#each tasks as task}
 				{#if task.topic == 'subtask'}
-					<p> <a href={task.url} data-sveltekit-prefetch>{task.name}</a> <small class="blue-on-green">{task.forkCount} forks</small> </p>
-					<p> {task.description} </p>
+					<p>
+						<a href={task.url} data-sveltekit-prefetch>{task.name}</a>
+						<small class="blue-on-green">{task.forkCount} forks</small>
+					</p>
+					<p>{task.description}</p>
 				{/if}
 			{/each}
 		</section>
@@ -63,7 +69,7 @@
 									</div>
 								</div>
 								<strong class="profile">
-									<img src={fork.avatarUrl} alt="" class="avatar">
+									<img src={fork.avatarUrl} alt="" class="avatar" />
 									<a href={fork.ownerUrl} target="_blank" rel="noreferrer">@{fork.owner}</a>
 								</strong>
 							</li>
@@ -81,55 +87,63 @@
 		margin-top: 0.5rem;
 	}
 
-	small { font-size: 0.7em; }
+	small {
+		font-size: 0.7em;
+	}
 
 	section.tasks {
 		max-width: 42rem;
 		padding: 1rem;
+	}
 
-		& p, & li {
-			display: flex;
-			align-items: flex-end;
-			justify-content: space-between;
-		}
+	section.tasks p {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+	}
 
-		& a {
-			text-transform: capitalize;
-			display: flex;
-			flex-wrap: nowrap;
-			justify-content: flex-start;
-			align-items: center;
-			white-space: nowrap;
-			text-overflow: ellipsis;
-			overflow: hidden;
-		}
+	section.tasks a {
+		text-transform: capitalize;
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-items: center;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
 
-		& small {
-			margin-left: 0.25rem;
-			padding: 0 0.1rem;
-			transform: translateY(-5px);
-			white-space: nowrap;
-		}
+	section.tasks small {
+		margin-left: 0.25rem;
+		padding: 0 0.1rem;
+		transform: translateY(-5px);
+		white-space: nowrap;
 	}
 
 	@media (max-width: 750px) {
-		section.tasks { width: 100%; }
+		section.tasks {
+			width: 100%;
+		}
 	}
 
-	section.tasks, .shadow {
+	section.tasks,
+	.shadow {
 		border-width: 1px;
 		border-style: solid;
 		margin-left: var(--shadow);
 	}
 
-	section.tasks p:nth-of-type(2n) { margin-bottom: 1em; }
+	section.tasks p:nth-of-type(2n) {
+		margin-bottom: 1em;
+	}
 
 	:global(section.tasks *::selection) {
 		background-color: var(--turquoise);
 		color: var(--blueberry);
 	}
 
-	section.tasks::after, .shadow::after {
+	section.tasks::after,
+	.shadow::after {
 		content: '';
 		position: absolute;
 		z-index: -1;
@@ -141,18 +155,25 @@
 		border-radius: var(--rounded);
 	}
 
-	.tasks p { margin-top: 0.4em; }
+	.tasks p {
+		margin-top: 0.4em;
+	}
 
-	:global(section.tasks h3.subtasks) { display: none; }
+	:global(section.tasks h3.subtasks) {
+		display: none;
+	}
 
-	:global(section.tasks:has(p) h3), :global(section.show h3) { display: block !important; }
-
+	:global(section.tasks:has(p) h3),
+	:global(section.show h3) {
+		display: block !important;
+	}
 
 	section.showcase {
 		display: none;
 		display: block;
+	}
 
-		& ul {
+	section.showcase ul {
 		display: flex;
 		gap: 1rem;
 		margin: 0 -1rem;
@@ -160,28 +181,34 @@
 		overflow: auto;
 		scroll-snap-type: x mandatory;
 		padding-bottom: 1rem;
-
-			& li {
-				display: flex;
-				flex-wrap: wrap;
-				margin-top: 1rem;
-				padding: 0.5rem 1rem;
-				border-radius: var(--rounded);
-				margin-bottom: 0;
-				position: relative;
-				width: 300px;
-				min-width: 300px;
-				scroll-snap-align: center;
-				gap: 0.25rem;
-			}
-		}
 	}
 
-	section.stargazer { display: block; }
+	section.showcase ul li {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 1rem;
+		padding: 0.5rem 1rem;
+		border-radius: var(--rounded);
+		margin-bottom: 0;
+		position: relative;
+		width: 300px;
+		min-width: 300px;
+		scroll-snap-align: center;
+		gap: 0.25rem;
+	}
 
-	.repo { overflow: hidden; }
+	section.stargazer {
+		display: block;
+	}
 
-	.repo a, .repo span { display: block; }
+	.repo {
+		overflow: hidden;
+	}
+
+	.repo a,
+	.repo span {
+		display: block;
+	}
 
 	.repo-title {
 		white-space: nowrap;
@@ -194,21 +221,22 @@
 		gap: 0.2em;
 		text-transform: uppercase;
 		flex-wrap: wrap;
-
-		& a {
-			border: 1px solid currentColor;
-			border-radius: 1rem;
-			padding: 0.2em 0.4em;
-			line-height: 1;
-			text-decoration: none;
-			font-size: 0.6em;
-
-			& :hover {
-				background-color: var(--lavender);
-				color: var(--blueberry);
-			}
-		} 
 	}
+
+	.links a {
+		border: 1px solid currentColor;
+		border-radius: 1rem;
+		padding: 0.2em 0.4em;
+		line-height: 1;
+		text-decoration: none;
+		font-size: 0.6em;
+	}
+
+	.links a:hover {
+		background-color: var(--lavender);
+		color: var(--blueberry);
+	}
+
 	.profile {
 		position: relative;
 		width: 100%;
@@ -220,13 +248,13 @@
 		gap: 0.5rem;
 		padding: 0.5rem 0;
 		margin: 0;
+	}
 
-		& a {
-			text-decoration: none;
-			font-size: 0.7em;
-			display: block;
-			padding: 0;
-		}
+	.profile a {
+		text-decoration: none;
+		font-size: 0.7em;
+		display: block;
+		padding: 0;
 	}
 
 	.profile::before {
@@ -239,7 +267,6 @@
 		border-top: 1px solid currentColor;
 	}
 
-
 	.avatar {
 		width: 2rem;
 		height: 2rem;
@@ -247,5 +274,9 @@
 		margin-bottom: 0;
 	}
 
-	@media (min-width: 60em) { section.tasks { min-width: 26rem; } }
+	@media (min-width: 60em) {
+		section.tasks {
+			min-width: 26rem;
+		}
+	}
 </style>

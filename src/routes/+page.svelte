@@ -1,14 +1,25 @@
 <script>
-    import Program from '$lib/components/program/Program.svelte';
-    import Semesters from '$lib/components/program/Semesters.svelte';
-    import Topics from '$lib/components/program/sprint/Topics.svelte';
+	import Program from '$lib/components/program/Program.svelte';
+	import Semesters from '$lib/components/program/Semesters.svelte';
 
-    export let data
+	export let data;
 
-    const {title, subtitle, content, semesters, topics, startdate} = data
-
+	const { title, subtitle, content, semesters } = data;
 </script>
 
 <Program {title} {content} />
 <Semesters {subtitle} {semesters} />
-<Topics {topics} {startdate} />
+
+<style>
+	:global(body:before) {
+		width: 160px;
+	}
+	:global(body:after) {
+		width: 160px;
+	}
+	@media (min-width: 40em) {
+		:global(body:before) {
+			width: 350px !important;
+		}
+	}
+</style>
