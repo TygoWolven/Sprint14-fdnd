@@ -39,21 +39,9 @@
 <style>
 	header {
 		width: 100%;
-		height: 1.75em;
+		height: 2.5em;
 		background-color: var(--lavender);
 	}
-
-	header::before {
-        content: '';
-        position: absolute;
-        z-index: -1;
-		height: 1.95em;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: calc(var(--shadow) * -1.75);
-        border: 1px solid var(--lavender);
-    }
 
 	nav {
 		position: sticky;
@@ -68,7 +56,6 @@
 		border-radius: 0 0 120px 120px;
 		flex-wrap: nowrap;
 		font-size: 0.8rem;
-		z-index: 2;
 	}
 
 	@media (max-width:750px){
@@ -81,19 +68,6 @@
 		nav{
 			width: 60%;
 		}
-	}
-
-	nav::before {
-		content: '';
-		position: absolute;
-		z-index: -1;
-		height: 3.95em;
-		top: 0;
-		left: calc(var(--shadow) * -1.75);
-		right: calc(var(--shadow) * -1.75);
-		bottom: calc(var(--shadow) * -1.75);
-		border: 1px solid var(--lavender);
-		border-radius: 0 0 120px 120px;
 	}
 
 	nav ul {
@@ -113,18 +87,30 @@
 		transform: none;
 		display: inline-block;
 		padding: 0.25em 0.5em;
-		border-radius: 12px;
 		text-decoration: none;
 		white-space: nowrap;
 		text-decoration: none;
 		margin-left: var(--shadow);
 		color: var(--attention);
 		background-color: var(--lavender);
-		box-shadow: -4px 4px 0 0 var(--attention-background);
 		border-radius: 12px;
 		border: 1px solid var(--attention);
 		outline: none;
 		transition: all 0.3s ease-out; 
+	}
+
+	nav ul li a::before{
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		border: 1px solid var(--attention);
+		border-radius: 12px;
+		top: calc(var(--shadow) * .85);
+		left: calc(var(--shadow) * -.85);
+		right: calc(var(--shadow) * -.75);
+		transition: all 0.3s ease-out;
 	}
 
 	header nav ul li h1 {
@@ -143,13 +129,11 @@
 		color: var(--white);
 		padding: .25em .75em;
 		transform: translateY(1px);
-		box-shadow: -2px 2px 0 0 var(--attention-background);
 	}
 
 	nav ul li a:active, nav ul li a:focus {
 		background-color: var(--attention);
 		color: var(--white);	
 		transform: translateY(1px);
-		box-shadow: -2px 2px 0 0 var(--attention-background);
 	} 
 </style>
