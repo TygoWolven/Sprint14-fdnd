@@ -124,7 +124,7 @@
 		border-radius: 12px;
 		border: 1px solid var(--attention);
 		outline: none;
-		translate: all 0.3s ease-out; 
+		transition: all 0.3s ease-out; 
 	}
 
 	header nav ul li h1 {
@@ -146,7 +146,9 @@
 		box-shadow: -2px 2px 0 0 var(--attention-background);
 	}
 
-	nav ul li a:active{
+	nav ul li a:active, nav ul li a:focus {
+		background-color: var(--attention);
+		color: var(--white);	
 		transform: translateY(1px);
 		box-shadow: -2px 2px 0 0 var(--attention-background);
 	} 
