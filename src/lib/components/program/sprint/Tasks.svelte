@@ -93,30 +93,6 @@
 		justify-content: space-between;
 	}
 		
-	section.task li {
-		display: flex;
-		align-items: flex-end;
-		justify-content: space-between;
-	}
-
-	section.task a {
-		text-transform: capitalize;
-		display: flex;
-		flex-wrap: nowrap;
-		justify-content: flex-start;
-		align-items: center;
-		white-space: nowrap;
-		text-overflow: ellipsis;
-		overflow: hidden;
-	}
-
-	section.task small {
-		margin-left: 0.25rem;
-		padding: 0 0.1rem;
-		transform: translateY(-5px);
-		white-space: nowrap;
-	}
-
 
 	@media (max-width: 750px) {
 		section.tasks { width: 100%; }
