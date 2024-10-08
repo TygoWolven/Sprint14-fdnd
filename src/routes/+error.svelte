@@ -17,7 +17,7 @@
 		justify-content: center;
 		font-family: Arial, sans-serif;
 		padding: 0 0 5rem 0;
-		border-radius: 25px 0 0 0;
+		border-radius: 25px 25px 0 0;
 		background-color: var(--grey);
 	}
 	h1 {
