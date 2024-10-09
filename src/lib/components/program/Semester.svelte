@@ -23,11 +23,12 @@
 
 <style>
 	section.semester {
-		margin: 0 1.5rem 0 0;
-		scroll-snap-align: start;
 		padding: 0;
-		border: none;
+		margin: 0 1.5rem 0 0;
 		scroll-margin: 1rem;
+
+		border: none;
+		scroll-snap-align: start;
 	}
 
 	@media (max-width: 750px) {
@@ -38,8 +39,8 @@
 	}
 
 	:global(section.semester h2) {
-		font-size: 1.25rem;
 		line-height: 1.1;
+		font-size: 1.25rem;
 		margin-left: 1.25rem !important;
 	}
 
@@ -63,7 +64,6 @@
 	section.semester > a:focus { color: var(--blueberry); }
 
 	ol {
-		border-radius: var(--rounded);
 		list-style: none;
 		margin: 1rem 0.25rem 0;
 		padding: 1rem;
