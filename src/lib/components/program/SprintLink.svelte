@@ -45,11 +45,6 @@
 
 
 <style>
-	li:not(.extra):hover, li a:focus {
-		background-color: var(--white);
-		color: var(--blueberry);
-	}
-
 	a:focus { background-color: transparent; }
 
 	li {
@@ -71,12 +66,19 @@
 	}
 
 	li a span {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		font-weight: 900;
 		width: fit-content;
 		font-size: 0.7em;
-		text-align: center;
 		text-transform: uppercase;
 		border-radius: 10px 10px 0 10px;
 		background: var(--lavender); 
+		background: white;
+		border: 7px inset var(--lavender);
+		box-sizing: border-box;
 		width: 80px;
 		aspect-ratio: 1;
 	}
@@ -88,7 +90,7 @@
 		aspect-ratio: 1;
 		left: 72px;
 		border-radius: 0 0 50% 0;
-		top: 0;
+		top: 1px;
 		box-shadow: 0.5em 0.5em 0 0 var(--lavender);
 		transform: rotateZ(90deg);
 	}
@@ -101,13 +103,12 @@
 		display: flex;
 		flex-direction: column;
 		border-radius: 0 10px 10px 0;
+		padding-left: .25em;
 	}
 
-	:global(li.active) { background-color: var(--white); }
+	:global(li.past) { opacity: 0.6; }
 
-	:global(li.past) { opacity: 0.75; }
-
-	:global(li.past strong) { font-weight: 500; }
+	:global(li.past strong) { font-weight: 500; text-decoration: line-through; }
 
     :global(li.past time) { text-decoration: line-through; }
 

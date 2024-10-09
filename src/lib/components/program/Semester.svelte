@@ -63,7 +63,6 @@
 	section.semester > a:focus { color: var(--blueberry); }
 
 	ol {
-		border-radius: var(--rounded);
 		list-style: none;
 		margin: 1rem 0.25rem 0;
 		padding: 1rem;
