@@ -54,6 +54,7 @@
 
 		font-size: 1rem;
 		border-radius: 10px;
+		margin-top: 0.5em;
 	}
 
 	li a {
