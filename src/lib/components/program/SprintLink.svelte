@@ -22,14 +22,15 @@
 	<li class:active class:past>
 		<a data-sveltekit-prefetch href="{semester.slug}/{sprint.slug}">
 			<span>Sprint<br>{sprint.sprintNumber}</span>
-			<strong>{sprint.title}</strong>
+			<div>
+				<strong>{sprint.title}</strong>
+				<time class="rounded blue-on-green">
+					{#if sprint.startdate}
+						{prettyDate(sprint.startdate)}
+					{/if}
+				</time>
+			</div>
 		</a>
-
-		<time class="rounded blue-on-green">
-			{#if sprint.startdate}
-				{prettyDate(sprint.startdate)}
-			{/if}
-		</time>
 	</li>
 {:else}
 	<li class="extra" class:active class:past>
@@ -44,15 +45,6 @@
 
 
 <style>
-	li a {
-		font-size: 1rem;
-		line-height: 1.3;
-		padding: 0.2em 0.1em;
-		transition: 0.1s ease-out background, 0.1s ease-out color;
-		border-radius: 0.2em;
-		color: var(--blueberry);
-	}
-
 	li:not(.extra):hover, li a:focus {
 		background-color: var(--white);
 		color: var(--blueberry);
@@ -60,26 +52,55 @@
 
 	a:focus { background-color: transparent; }
 
-	li a > span {
-		width: fit-content;
-		aspect-ratio: 1;
-		font-size: 0.7em;
-		letter-spacing: 0;
-		text-align: center;
-		text-transform: uppercase;
-		background: var(--lavender);
-		margin-right: 1.2em;
-		color: var(--white);
-		padding: 0.5em;
-	}
-
 	li {
 		position: relative;
 		display: flex;
-		justify-content: space-between;
 		font-size: 1rem;
-		align-items: baseline;
-		border-radius: 0.2em;
+		align-items: center;
+		border-radius: 10px;
+		margin-top: 0.5em;
+	}
+
+	li a {
+		margin: 0;
+		padding: 0;
+		font-size: 1rem;
+		transition: 0.1s ease-out background, 0.1s ease-out color;
+		border-radius: 10px;
+		color: var(--blueberry);
+	}
+
+	li a span {
+		width: fit-content;
+		font-size: 0.7em;
+		text-align: center;
+		text-transform: uppercase;
+		border-radius: 10px 10px 0 10px;
+		background: var(--lavender); 
+		width: 80px;
+		aspect-ratio: 1;
+	}
+
+	li a span::before {
+		content: '';
+		position: absolute;
+		width: 1.1em;
+		aspect-ratio: 1;
+		left: 72px;
+		border-radius: 0 0 50% 0;
+		top: 0;
+		box-shadow: 0.5em 0.5em 0 0 var(--lavender);
+		transform: rotateZ(90deg);
+	}
+
+	li a div {
+		width: 14em;
+		align-self: end;
+		background: var(--lavender);
+		height: 60px;
+		display: flex;
+		flex-direction: column;
+		border-radius: 0 10px 10px 0;
 	}
 
 	:global(li.active) { background-color: var(--white); }
