@@ -1,3 +1,17 @@
+# FDND Program
+
+The curriculum of Frontend Design & Development
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f528383e-83eb-43c4-8b8e-f88b2e079608/deploy-status)](https://app.netlify.com/sites/hilarious-gumdrop-9fd223/deploys)
+
+# create-svelte
+
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+
+## Creating a project
+
+If you're seeing this, you've probably already done this step. Congrats!
+=======
 # FDND
 ## FDND Programma Micro Site
 Het programma van FDND is te bekijken op https://programma.fdnd.nl/. Hier is informatie te vinden over de semesters en de sprints die het curriculum van FDND vormen. 
@@ -31,11 +45,35 @@ Volg deze stappen om het project lokaal op te zetten:
 ## Bronnen
 [Backlog](https://github.com/orgs/fdnd-agency/projects/39)
 
-[Design](https://fdnd.nl)
+```bash
+# create a new project in the current directory
+npm create svelte@latest
 
-[API Hygraph GraphQL](https://eu-central-1.cdn.hygraph.com/content/cl54wpnkq38x701t370gr4cvs/maste)
+# create a new project in my-app
+npm create svelte@latest my-app
+```
+## Developing
 
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+=======
 ## Licentie
 ![GNU GPL V3](https://www.gnu.org/graphics/gplv3-127x51.png)
 
-This work is licensed under [GNU GPLv3](./LICENSE).
+```bash
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+To create a production version of your app:
+
+```bash
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
