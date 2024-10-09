@@ -48,60 +48,65 @@
 	a:focus { background-color: transparent; }
 
 	li {
-		position: relative;
 		display: flex;
-		font-size: 1rem;
+		position: relative;
 		align-items: center;
+
+		font-size: 1rem;
 		border-radius: 10px;
-		margin-top: 0.5em;
 	}
 
 	li a {
 		margin: 0;
 		padding: 0;
 		font-size: 1rem;
-		transition: 0.1s ease-out background, 0.1s ease-out color;
 		border-radius: 10px;
+		transition: 0.1s ease-out background, 0.1s ease-out color;
 		color: var(--blueberry);
 	}
 
 	li a span {
 		display: flex;
-		align-items: center;
-		justify-content: center;
 		text-align: center;
-		font-weight: 900;
-		width: fit-content;
-		font-size: 0.7em;
+		align-items: center;
 		text-transform: uppercase;
+		justify-content: center;
+
+		width: 80px;
+		aspect-ratio: 1;
+
+		font-weight: 900;
+		font-size: 0.7em;
 		border-radius: 10px 10px 0 10px;
-		background: var(--lavender); 
+
 		background: white;
 		border: 7px inset var(--lavender);
 		box-sizing: border-box;
-		width: 80px;
-		aspect-ratio: 1;
 	}
 
 	li a span::before {
 		content: '';
 		position: absolute;
+
 		width: 1.1em;
 		aspect-ratio: 1;
 		left: 72px;
-		border-radius: 0 0 50% 0;
 		top: 1px;
+
+		border-radius: 0 0 50% 0;
 		box-shadow: 0.5em 0.5em 0 0 var(--lavender);
 		transform: rotateZ(90deg);
 	}
 
 	li a div {
-		width: 14em;
-		align-self: end;
-		background: var(--lavender);
-		height: 60px;
 		display: flex;
 		flex-direction: column;
+		align-self: end;
+
+		width: 14em;
+		background: var(--lavender);
+		height: 60px;
+
 		border-radius: 0 10px 10px 0;
 		padding-left: .25em;
 	}
