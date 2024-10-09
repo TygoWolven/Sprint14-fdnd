@@ -15,7 +15,9 @@
 			title: 'Sprint 14'
 		}
 	];
-
+	
+	const [firstItem, secondItem, thirdItem] = navItems;
+	
 	import logo from '$lib/assets/HvA-logo.png';
 </script>
 
@@ -28,16 +30,17 @@
 		<nav>
 			<h2>Menu</h2>
 			<ul>
-				{#each navItems as item }
+				{#each navItems as item}
 					<li>
-						<a class:active={$page.url.pathname === item.href} href={item.href} target="_self">{item.title}</a>
+						<a class:active={$page.url.pathname === item.href} href={item.href} target="_self"
+							>{item.title}</a
+						>
 					</li>
 				{/each}
 			</ul>
 		</nav>
 	</div>
 </header>
-
 
 <style>
 	a {
@@ -47,9 +50,9 @@
 	}
 
 	header div {
-		display:flex;
+		display: flex;
 		max-width: var(--max-width);
-		flex-wrap:nowrap;
+		flex-wrap: nowrap;
 		align-items: baseline;
 		justify-content: space-between;
 		margin-left: 2em;
@@ -123,12 +126,14 @@
 		}
 
 		:global(nav a.active) {
-			color: var(--blueberry) !important;;
+			color: var(--blueberry) !important;
 		}
 	}
 
 	@media (min-width: 22em) {
-		nav { font-size: 1rem; }
+		nav {
+			font-size: 1rem;
+		}
 	}
 
 	a {
@@ -137,7 +142,7 @@
         padding: .75rem;
         background-color: var(--white);
         border-radius: 10px;
-		border: 1px solid var(--attention);
+		    border: 1px solid var(--attention);
         color: var(--attention);
         font-weight: 700;
         text-decoration: none;
