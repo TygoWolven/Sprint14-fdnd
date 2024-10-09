@@ -77,5 +77,3 @@ function formatForks({forks}) {
         return url.includes('https://') || url.includes('http://') ? url.trim() : `https://${url}`.trim()
     }
 }
-
-

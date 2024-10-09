@@ -94,19 +94,6 @@
 	section.tasks {
 		max-width: 42rem;
 		padding: 1rem;
-	}
-
-	/* & p {
-			display: flex;
-			align-items: flex-end;
-			justify-content: space-between;
-		}
-		
-		& li {
-			display: flex;
-			align-items: flex-end;
-			justify-content: space-between;
-		} */
 
 	section.tasks a {
 		text-transform: capitalize;
@@ -125,6 +112,13 @@
 		transform: translateY(-5px);
 		white-space: nowrap;
 	}
+    
+	section.tasks p {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+	}
+		
 
 	@media (max-width: 750px) {
 		section.tasks {

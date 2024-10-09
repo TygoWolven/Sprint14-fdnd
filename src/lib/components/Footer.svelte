@@ -71,7 +71,7 @@
 	ul li a {
 		position: relative;
 		color: var(--blueberry);
-		font-weight: 900;
+		font-weight: 700;
 		padding: 0.4em 0.6em;
 		border: 1px solid var(--blueberry);
 		border-radius: var(--rounded);
@@ -79,20 +79,30 @@
 		background: var(--grey);
 	}
 
-	ul li a:hover {
-		text-decoration: underline;
+	li a:focus-visible, li a:hover {
+		background-color: var(--call-to-action);
+		right: 1px;
+        top: 1px;
+		transition: all .4s ease-out;
 	}
 
-	ul li a::before {
-		content: '';
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		border: 1px solid var(--blueberry);
-		border-radius: var(--rounded);
-		background: var(--grey);
-		z-index: -10;
-		top: 2px;
-		right: 2px;
+	li a:focus-visible::before, li a:hover::before {
+		background-color: #b1b073;
+		right: 1px;
+    	top: 1px;
+	}
+
+    li a::before {
+        content: "";
+        z-index: -10;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 1px solid var(--attention);
+        background-color: var(--white);
+        border-radius: var(--rounded);
+        color: var(--attent);
+        right: 2px;
+        top: 2px;
 	}
 </style>
