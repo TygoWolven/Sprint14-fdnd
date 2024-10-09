@@ -3,7 +3,9 @@
 	import IconCal from '$lib/components/icons/Calendar.svelte';
 	import IconTopic from '$lib/components/icons/Topic.svelte';
 
-	export let startdate, topics;
+	export let startdate;
+	export let topics;
+	
 </script>
 
 <aside>
@@ -23,12 +25,6 @@
 </aside>
 
 <style>
-	aside { 
-		margin-top: 0.2em; 
-	}
-
-	aside h3 {
-		display: none;
 	}
 
 	aside ul {

@@ -25,7 +25,7 @@
 	{#if jsEnabled}
 		<input type="checkbox" id="show-hide-dates" class="toggle" on:change={toggleDates} />
 		<label for="show-hide-dates">
-			<span> Show/hide dates </span>
+			<span> Show/hide holidays </span>
 		</label>
 	{/if}
 

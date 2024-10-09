@@ -48,8 +48,6 @@
 		border-radius: var(--rounded);
 	}
 
-	details summary { cursor: pointer; }
-
 	:global(details li) {
 		margin: 0.5em 0 0;
 		font-size: 1rem;

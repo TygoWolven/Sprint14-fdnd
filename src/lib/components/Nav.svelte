@@ -1,47 +1,46 @@
 <script>
 	import { page } from '$app/stores';
-	$: navItems = [
-		{
-			href: '/',
-			title: 'Programma 2425'
-		},
+
+	let navItems = [
 		{
 			href: '/static-web/the-client',
 			title: 'Sprint 2'
 		},
 		{
+			href: '/',
+			title: 'FDND'
+		},
+		{
 			href: '/workflow-tooling-frameworks/lose-your-head',
 			title: 'Sprint 14'
-		},
-	]
-
+		}
+	];
+	
+	const [firstItem, secondItem, thirdItem] = navItems;
+	
 	import logo from '$lib/assets/HvA-logo.png';
 </script>
 
 <header>
 	<div>
-		<img alt="The project logo" src={logo} />
+		<img alt="" src={logo} />
 		<p>Frontend Design & Development</p>
 	</div>
 	<div>
-		<a href="/">
-			<h1>
-				<abbr title="Frontend Design &amp; Development"> <span>FDND</span> </abbr>
-			</h1>
-		</a>
 		<nav>
 			<h2>Menu</h2>
 			<ul>
-				{#each navItems as item }
+				{#each navItems as item}
 					<li>
-						<a class:active={$page.url.pathname === item.href} href={item.href} target="_self">{item.title}</a>
+						<a class:active={$page.url.pathname === item.href} href={item.href} target="_self"
+							>{item.title}</a
+						>
 					</li>
 				{/each}
 			</ul>
 		</nav>
 	</div>
 </header>
-
 
 <style>
 	a {
@@ -50,42 +49,10 @@
 		padding: 0 1.5em;
 	}
 
-	h1 { 
-		margin: 0; 
-	}
-
-	h1 > abbr {
-		position: relative;
-		color: var(--blueberry);
-		font-size: 1.4rem;
-		font-weight: 900;
-		letter-spacing: -0.1em;
-		padding: 0.2em 0.4em;
-		border: 1px solid var(--blueberry);
-		border-radius: var(--rounded);
-		text-decoration: none;
-		background: var(--grey);
-		left: 15px;
-		bottom: 3.1em;
-	}
-
-	h1 > abbr::before {
-		content: '';
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		border: 1px solid var(--blueberry);
-		border-radius: var(--rounded);
-		background: var(--grey);
-		z-index: -10;
-		top: 2px;
-		right: 2px;
-	}
-
 	header div {
-		display:flex;
+		display: flex;
 		max-width: var(--max-width);
-		flex-wrap:nowrap;
+		flex-wrap: nowrap;
 		align-items: baseline;
 		justify-content: space-between;
 		margin-left: 2em;
@@ -117,7 +84,12 @@
 		background-color: var(--grey);
 		color: var(--blueberry);
 		border-radius: 15px 15px 0 0;
-		margin-top: 3em;
+		margin-top: 1em;
+		margin-inline: auto;
+	}
+
+	nav h2 {
+		padding: -.25em;
 	}
 
 	nav::before {
@@ -131,31 +103,21 @@
 		box-shadow: 0.5em 0.5em 0 0 var(--grey);
 	}
 
-	h2 {
+	nav::after {
+		content: '';
 		position: absolute;
-		text-indent: -9999px;
+		width: 1.5em;
+		aspect-ratio: 1;
+		right: -1.5em;
+		border-radius: 0 0 0 50%;
+		bottom: 0;
+		box-shadow: -0.5em 0.5em 0 0 var(--grey);
 	}
-	ul {
+	nav ul {
 		display: flex;
 		font-weight: 500;
 		padding: 0 4em;
-	}
-
-	nav ul li a {
-		position: relative;
-		transform: none;
-		display: inline-block;
-		letter-spacing: -0.03em;
-		border-radius: 1em;
-		text-decoration: none;
-		transition: background 0.3s ease-out, color 0.3s ease-out;
-		white-space: nowrap;
-		color: var(--blueberry);
-		top: 3px;
-	}
-
-	nav ul li a:hover {
-		text-decoration: underline;
+		gap: 1em;
 	}
 
 	@media (max-width: 750px) {
@@ -164,16 +126,70 @@
 		}
 
 		:global(nav a.active) {
-			color: var(--blueberry) !important;;
+			color: var(--blueberry) !important;
 		}
 	}
 
 	@media (min-width: 22em) {
-		nav { font-size: 1rem; }
+		nav {
+			font-size: 1rem;
+		}
 	}
 
-	@media (min-width: 42em) {
-		nav { margin-bottom: 0; }
-		nav ul a { transform: rotate(-5deg); }
+	a {
+        position: relative;
+        z-index: 1;
+        padding: .75rem;
+        background-color: var(--white);
+        border-radius: 10px;
+		    border: 1px solid var(--attention);
+        color: var(--attention);
+        font-weight: 700;
+        text-decoration: none;
+    }
+	
+	li a:focus-visible, li a:hover {
+		background-color: var(--call-to-action);
+		right: 1px;
+        top: 2px;
+	}
+
+	li a:focus-visible::before, li a:hover::before {
+		background-color: #b1b073;
+		right: 2px;
+    	top: 2px;
+	}
+
+	li a.active{
+		background-color: var(--turquoise);
+		color: var(--attention);
+	}
+
+	li a.active::before {
+		background-color: #56ad93;
+		color: var(--attention);
+	}
+
+	li a.active:hover, li a.active:focus-visible {
+		background-color: var(--call-to-action);
+		color: var(--attention);
+	}
+	li a.active:hover::before, li a.active:focus-visible::before {
+		background-color: #b1b073;
+		color: var(--attention);
+	}
+
+    li a::before {
+        content: "";
+        z-index: -10;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 1px solid var(--attention);
+        background-color: var(--white);
+        border-radius: 10px;
+        color: var(--attention);
+        right: 4px;
+        top: 4px;
 	}
 </style>
