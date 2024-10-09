@@ -96,7 +96,7 @@
 		padding: 1rem;
 	}
 
-		& p {
+	/* & p {
 			display: flex;
 			align-items: flex-end;
 			justify-content: space-between;
@@ -106,8 +106,7 @@
 			display: flex;
 			align-items: flex-end;
 			justify-content: space-between;
-		}
-
+		} */
 
 	section.tasks a {
 		text-transform: capitalize;
