@@ -94,6 +94,7 @@
 	section.tasks {
 		max-width: 42rem;
 		padding: 1rem;
+	}
 
 	section.tasks a {
 		text-transform: capitalize;
