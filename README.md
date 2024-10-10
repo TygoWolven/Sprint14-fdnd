@@ -5,6 +5,8 @@ Het programma van FDND is te bekijken op https://programma.fdnd.nl/. Hier is inf
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f528383e-83eb-43c4-8b8e-f88b2e079608/deploy-status)](https://app.netlify.com/sites/hilarious-gumdrop-9fd223/deploys)
 
 ## Screenshot
+De website live bekijken kan ook! Klik hiervoor op de link: https://fdnd-programma.netlify.app/
+
 ![image](https://github.com/user-attachments/assets/fc536dfc-9b3f-491a-9696-93257039f1a2)
 
 ## Beschrijving
@@ -40,7 +42,7 @@ Mocht je dit project lokaa willen opzetten? Dat kan! Volg dan de volgende stappe
    ````
 
 ## Bronnen
-[Backlog](https://github.com/orgs/fdnd-agency/projects/39)
+Projectboard: [Backlog](https://github.com/orgs/fdnd-agency/projects/39)
 
 ## Licentie
 ![GNU GPL V3](https://www.gnu.org/graphics/gplv3-127x51.png)
