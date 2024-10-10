@@ -76,7 +76,7 @@
 		border: 1px solid var(--blueberry);
 		border-radius: var(--rounded);
 		text-decoration: none;
-		background: var(--grey);
+		background: var(--white);
 	}
 
 	li a:focus-visible, li a:hover {
@@ -99,7 +99,7 @@
         width: 100%;
         height: 100%;
         border: 1px solid var(--attention);
-        background-color: var(--white);
+        background-color: var(--grey);
         border-radius: var(--rounded);
         color: var(--attent);
         right: 2px;
