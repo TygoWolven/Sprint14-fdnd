@@ -23,21 +23,10 @@
 
 <header>
 	<div>
-		<img alt="The project logo" src={logo} />
+		<img alt="" src={logo} />
 		<p>Frontend Design & Development</p>
 	</div>
 	<div>
-		<a href="/">
-			<h1>
-				<a
-					class:active={$page.url.pathname === secondItem.href}
-					href={secondItem.href}
-					target="_self"
-				>
-					{secondItem.title}
-				</a>
-			</h1>
-		</a>
 		<nav>
 			<h2>Menu</h2>
 			<ul>
@@ -58,38 +47,6 @@
 		text-decoration: none;
 		margin-left: var(--shadow);
 		padding: 0 1.5em;
-	}
-
-	h1 {
-		margin: 0;
-	}
-
-	h1 > abbr {
-		position: relative;
-		color: var(--blueberry);
-		font-size: 1.4rem;
-		font-weight: 900;
-		letter-spacing: -0.1em;
-		padding: 0.2em 0.4em;
-		border: 1px solid var(--blueberry);
-		border-radius: var(--rounded);
-		text-decoration: none;
-		background: var(--grey);
-		left: 15px;
-		bottom: 3.1em;
-	}
-
-	h1 > abbr::before {
-		content: '';
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		border: 1px solid var(--blueberry);
-		border-radius: var(--rounded);
-		background: var(--grey);
-		z-index: -10;
-		top: 2px;
-		right: 2px;
 	}
 
 	header div {
@@ -127,7 +84,12 @@
 		background-color: var(--grey);
 		color: var(--blueberry);
 		border-radius: 15px 15px 0 0;
-		margin-top: 3em;
+		margin-top: 1em;
+		margin-inline: auto;
+	}
+
+	nav h2 {
+		padding: -.25em;
 	}
 
 	nav::before {
@@ -141,27 +103,21 @@
 		box-shadow: 0.5em 0.5em 0 0 var(--grey);
 	}
 
+	nav::after {
+		content: '';
+		position: absolute;
+		width: 1.5em;
+		aspect-ratio: 1;
+		right: -1.5em;
+		border-radius: 0 0 0 50%;
+		bottom: 0;
+		box-shadow: -0.5em 0.5em 0 0 var(--grey);
+	}
 	nav ul {
 		display: flex;
 		font-weight: 500;
 		padding: 0 4em;
-	}
-
-	nav ul li a {
-		position: relative;
-		transform: none;
-		display: inline-block;
-		letter-spacing: -0.03em;
-		border-radius: 1em;
-		text-decoration: none;
-		transition: background 0.3s ease-out, color 0.3s ease-out;
-		white-space: nowrap;
-		color: var(--blueberry);
-		top: 3px;
-	}
-
-	nav ul li a:hover {
-		text-decoration: underline;
+		gap: 1em;
 	}
 
 	@media (max-width: 750px) {
@@ -181,52 +137,59 @@
 	}
 
 	a {
-		position: relative;
-		z-index: 1;
-		border: 1px solid var(--attention);
-		padding: 0.75rem;
-		background-color: var(--white);
-		border-radius: 10px;
-		color: var(--attention);
-		font-weight: 700;
-		text-decoration: none;
-	}
-
-	a:focus-visible,
-	a:hover {
+        position: relative;
+        z-index: 1;
+        padding: .75rem;
+        background-color: var(--white);
+        border-radius: 10px;
+		    border: 1px solid var(--attention);
+        color: var(--attention);
+        font-weight: 700;
+        text-decoration: none;
+    }
+	
+	li a:focus-visible, li a:hover {
 		background-color: var(--call-to-action);
 		right: 1px;
-		top: 1px;
-		transition: all 0.4s ease-out;
+        top: 2px;
 	}
 
-	a:focus-visible::after,
-	a:hover::after {
+	li a:focus-visible::before, li a:hover::before {
 		background-color: #b1b073;
-		right: 1px;
-		top: 1px;
+		right: 2px;
+    	top: 2px;
 	}
 
-	a.active {
+	li a.active{
 		background-color: var(--turquoise);
 		color: var(--attention);
 	}
 
-	a.active::after {
-		background-color: #5c9c89;
+	li a.active::before {
+		background-color: #56ad93;
+		color: var(--attention);
 	}
 
-	a::after {
-		content: '';
-		z-index: -1;
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		border: 1px solid var(--attention);
-		background-color: var(--white);
-		border-radius: 10px;
-		color: var(--attent);
-		right: 2px;
-		top: 2px;
+	li a.active:hover, li a.active:focus-visible {
+		background-color: var(--call-to-action);
+		color: var(--attention);
+	}
+	li a.active:hover::before, li a.active:focus-visible::before {
+		background-color: #b1b073;
+		color: var(--attention);
+	}
+
+    li a::before {
+        content: "";
+        z-index: -10;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 1px solid var(--attention);
+        background-color: var(--white);
+        border-radius: 10px;
+        color: var(--attention);
+        right: 4px;
+        top: 4px;
 	}
 </style>

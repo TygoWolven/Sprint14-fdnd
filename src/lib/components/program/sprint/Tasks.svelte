@@ -7,7 +7,7 @@
 	export let stargazer = false;
 	if (tasks) {
 		tasks.forEach((task) => {
-			if (!stargazer && task && task.forks.length > 0) {
+			if (!stargazer && task.forks && task.forks.length > 0) {
 				stargazer = true;
 			}
 		});
@@ -96,18 +96,6 @@
 		padding: 1rem;
 	}
 
-	/* & p {
-			display: flex;
-			align-items: flex-end;
-			justify-content: space-between;
-		}
-		
-		& li {
-			display: flex;
-			align-items: flex-end;
-			justify-content: space-between;
-		} */
-
 	section.tasks a {
 		text-transform: capitalize;
 		display: flex;
@@ -125,6 +113,13 @@
 		transform: translateY(-5px);
 		white-space: nowrap;
 	}
+    
+	section.tasks p {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+	}
+		
 
 	@media (max-width: 750px) {
 		section.tasks {

@@ -25,8 +25,6 @@
 </aside>
 
 <style>
-	}
-
 	aside ul {
 		margin: 0;
 		display: flex;

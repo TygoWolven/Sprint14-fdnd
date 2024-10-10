@@ -22,14 +22,15 @@
 	<li class:active class:past>
 		<a data-sveltekit-prefetch href="{semester.slug}/{sprint.slug}">
 			<span>Sprint<br>{sprint.sprintNumber}</span>
-			<strong>{sprint.title}</strong>
+			<div>
+				<strong>{sprint.title}</strong>
+				<time class="rounded blue-on-green">
+					{#if sprint.startdate}
+						{prettyDate(sprint.startdate)}
+					{/if}
+				</time>
+			</div>
 		</a>
-
-		<time class="rounded blue-on-green">
-			{#if sprint.startdate}
-				{prettyDate(sprint.startdate)}
-			{/if}
-		</time>
 	</li>
 {:else}
 	<li class="extra" class:active class:past>
@@ -44,49 +45,76 @@
 
 
 <style>
-	li a {
-		font-size: 1rem;
-		line-height: 1.3;
-		padding: 0.2em 0.1em;
-		transition: 0.1s ease-out background, 0.1s ease-out color;
-		border-radius: 0.2em;
-		color: var(--blueberry);
-	}
-
-	li:not(.extra):hover, li a:focus {
-		background-color: var(--white);
-		color: var(--blueberry);
-	}
-
 	a:focus { background-color: transparent; }
 
-	li a > span {
-		width: fit-content;
-		aspect-ratio: 1;
-		font-size: 0.7em;
-		letter-spacing: 0;
-		text-align: center;
-		text-transform: uppercase;
-		background: var(--lavender);
-		margin-right: 1.2em;
-		color: var(--white);
-		padding: 0.5em;
-	}
-
 	li {
-		position: relative;
 		display: flex;
-		justify-content: space-between;
+		position: relative;
+		align-items: center;
+
 		font-size: 1rem;
-		align-items: baseline;
-		border-radius: 0.2em;
+		border-radius: 10px;
+		margin-top: 0.5em;
 	}
 
-	:global(li.active) { background-color: var(--white); }
+	li a {
+		margin: 0;
+		padding: 0;
+		font-size: 1rem;
+		border-radius: 10px;
+		transition: 0.1s ease-out background, 0.1s ease-out color;
+		color: var(--blueberry);
+	}
 
-	:global(li.past) { opacity: 0.75; }
+	li a span {
+		display: flex;
+		text-align: center;
+		align-items: center;
+		text-transform: uppercase;
+		justify-content: center;
 
-	:global(li.past strong) { font-weight: 500; }
+		width: 80px;
+		aspect-ratio: 1;
+
+		font-weight: 900;
+		font-size: 0.7em;
+		border-radius: 10px 10px 0 10px;
+
+		background: white;
+		border: 7px inset var(--lavender);
+		box-sizing: border-box;
+	}
+
+	li a span::before {
+		content: '';
+		position: absolute;
+
+		width: 1.1em;
+		aspect-ratio: 1;
+		left: 72px;
+		top: 1px;
+
+		border-radius: 0 0 50% 0;
+		box-shadow: 0.5em 0.5em 0 0 var(--lavender);
+		transform: rotateZ(90deg);
+	}
+
+	li a div {
+		display: flex;
+		flex-direction: column;
+		align-self: end;
+
+		width: 14em;
+		background: var(--lavender);
+		height: 60px;
+
+		border-radius: 0 10px 10px 0;
+		padding-left: .25em;
+	}
+
+	:global(li.past) { opacity: 0.6; }
+
+	:global(li.past strong) { font-weight: 500; text-decoration: line-through; }
 
     :global(li.past time) { text-decoration: line-through; }
 
