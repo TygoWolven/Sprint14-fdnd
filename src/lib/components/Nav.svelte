@@ -186,7 +186,7 @@
         width: 100%;
         height: 100%;
         border: 1px solid var(--attention);
-        background-color: var(--white);
+        background-color: var(--grey);
         border-radius: 10px;
         color: var(--attention);
         right: 4px;

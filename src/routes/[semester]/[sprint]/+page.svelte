@@ -5,7 +5,7 @@
 
 	export let data;
 
-	const { title, sprintNumber, startdate, content, weekPlans, topics, tasks } = data;
+	const {title, sprintNumber, startdate, content, weekPlans, topics, tasks } = data
 </script>
 
 <div>

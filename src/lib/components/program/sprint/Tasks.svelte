@@ -7,7 +7,7 @@
 	export let stargazer = false;
 	if (tasks) {
 		tasks.forEach((task) => {
-			if (!stargazer && task && task.forks.length > 0) {
+			if (!stargazer && task.forks && task.forks.length > 0) {
 				stargazer = true;
 			}
 		});
