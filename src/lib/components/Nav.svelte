@@ -32,9 +32,7 @@
 			<ul>
 				{#each navItems as item}
 					<li>
-						<a class:active={$page.url.pathname === item.href} href={item.href} target="_self"
-							>{item.title}</a
-						>
+						<a class:active={$page.url.pathname === item.href} href={item.href} target="_self"> {item.title} </a>
 					</li>
 				{/each}
 			</ul>
